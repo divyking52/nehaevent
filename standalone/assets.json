@@ -1,0 +1,182 @@
+﻿[
+    {
+        "filename":  "hero.mp4",
+        "mimetype":  "video/mp4",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/hero.mp4",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/large_hero.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/medium_hero.webp"
+                       }
+    },
+    {
+        "filename":  "welcome.jpeg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/81993a85-3384-43f3-b1a3-407037f75f8a/welcome.jpeg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/81993a85-3384-43f3-b1a3-407037f75f8a/large_welcome.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/81993a85-3384-43f3-b1a3-407037f75f8a/medium_welcome.webp"
+                       }
+    },
+    {
+        "filename":  "sheesh-mahal.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/43d5e709-4a05-4546-84dd-9fcb0ba0b8e7/sheesh-mahal.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/43d5e709-4a05-4546-84dd-9fcb0ba0b8e7/large_sheesh-mahal.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/43d5e709-4a05-4546-84dd-9fcb0ba0b8e7/medium_sheesh-mahal.webp"
+                       }
+    },
+    {
+        "filename":  "shaam-shandar.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/02535239-df21-4975-8eee-1c21af6bd072/shaam-shandar.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/02535239-df21-4975-8eee-1c21af6bd072/large_shaam-shandar.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/02535239-df21-4975-8eee-1c21af6bd072/medium_shaam-shandar.webp"
+                       }
+    },
+    {
+        "filename":  "review-5.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/f46ab895-df2e-4df2-8457-6ca854f1e70d/review-5.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/f46ab895-df2e-4df2-8457-6ca854f1e70d/large_review-5.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/f46ab895-df2e-4df2-8457-6ca854f1e70d/medium_review-5.webp"
+                       }
+    },
+    {
+        "filename":  "royal-divinity.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/ee69f014-8c93-4ae2-bc1c-3e954f973596/royal-divinity.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/ee69f014-8c93-4ae2-bc1c-3e954f973596/large_royal-divinity.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/ee69f014-8c93-4ae2-bc1c-3e954f973596/medium_royal-divinity.webp"
+                       }
+    },
+    {
+        "filename":  "review-4.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/668017f0-adbd-4e02-9b4e-40d206392db7/review-4.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/668017f0-adbd-4e02-9b4e-40d206392db7/large_review-4.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/668017f0-adbd-4e02-9b4e-40d206392db7/medium_review-4.webp"
+                       }
+    },
+    {
+        "filename":  "review-1.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/2b29af99-ae86-44ee-89a8-21ecf70e9d64/review-1.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/2b29af99-ae86-44ee-89a8-21ecf70e9d64/large_review-1.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/2b29af99-ae86-44ee-89a8-21ecf70e9d64/medium_review-1.webp"
+                       }
+    },
+    {
+        "filename":  "portrait.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/71e252ba-075e-4f35-b40d-b76944380d9d/portrait.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/71e252ba-075e-4f35-b40d-b76944380d9d/large_portrait.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/71e252ba-075e-4f35-b40d-b76944380d9d/medium_portrait.webp"
+                       }
+    },
+    {
+        "filename":  "review-3.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/b527df2e-570a-44bd-9ca7-80a6af99d2bf/review-3.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/b527df2e-570a-44bd-9ca7-80a6af99d2bf/large_review-3.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/b527df2e-570a-44bd-9ca7-80a6af99d2bf/medium_review-3.webp"
+                       }
+    },
+    {
+        "filename":  "review-2.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/19cea865-1bac-4c70-a48f-2950c4afd688/review-2.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/19cea865-1bac-4c70-a48f-2950c4afd688/large_review-2.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/19cea865-1bac-4c70-a48f-2950c4afd688/medium_review-2.webp"
+                       }
+    },
+    {
+        "filename":  "rajvada.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/690ee733-4157-4ee1-9d6a-1f1775cf269a/rajvada.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/690ee733-4157-4ee1-9d6a-1f1775cf269a/large_rajvada.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/690ee733-4157-4ee1-9d6a-1f1775cf269a/medium_rajvada.webp"
+                       }
+    },
+    {
+        "filename":  "hero-poster.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/hero-poster.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/large_hero-poster.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/medium_hero-poster.webp"
+                       }
+    },
+    {
+        "filename":  "love-ishq.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/8a695aa2-caa2-48ab-a9eb-d3b7ae10c496/love-ishq.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/8a695aa2-caa2-48ab-a9eb-d3b7ae10c496/large_love-ishq.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/8a695aa2-caa2-48ab-a9eb-d3b7ae10c496/medium_love-ishq.webp"
+                       }
+    },
+    {
+        "filename":  "floral-3.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e7d0d332-1b45-4679-bf5e-70d85b31aab7/floral-3.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e7d0d332-1b45-4679-bf5e-70d85b31aab7/large_floral-3.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e7d0d332-1b45-4679-bf5e-70d85b31aab7/medium_floral-3.webp"
+                       }
+    },
+    {
+        "filename":  "garden-of-eden.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/fd7970cb-b34a-42e6-aad0-9c0d32b6c309/garden-of-eden.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/fd7970cb-b34a-42e6-aad0-9c0d32b6c309/large_garden-of-eden.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/fd7970cb-b34a-42e6-aad0-9c0d32b6c309/medium_garden-of-eden.webp"
+                       }
+    },
+    {
+        "filename":  "floral-2.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/635728b0-988a-4baf-8c5e-3a4f6e24230d/floral-2.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/635728b0-988a-4baf-8c5e-3a4f6e24230d/large_floral-2.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/635728b0-988a-4baf-8c5e-3a4f6e24230d/medium_floral-2.webp"
+                       }
+    },
+    {
+        "filename":  "floral-1.jpg",
+        "mimetype":  "image/jpeg",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/76b1d542-b654-4eae-84c6-322552a27b7d/floral-1.jpg",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/76b1d542-b654-4eae-84c6-322552a27b7d/large_floral-1.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/76b1d542-b654-4eae-84c6-322552a27b7d/medium_floral-1.webp"
+                       }
+    },
+    {
+        "filename":  "banner.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/9523d049-257a-4c12-941a-1a7c26f58356/banner.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/9523d049-257a-4c12-941a-1a7c26f58356/large_banner.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/9523d049-257a-4c12-941a-1a7c26f58356/medium_banner.webp"
+                       }
+    },
+    {
+        "filename":  "behind-scenes.webp",
+        "mimetype":  "image/webp",
+        "url":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/688430ad-2154-405c-b13b-516db8e4122a/behind-scenes.webp",
+        "thumbnails":  {
+                           "large":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/688430ad-2154-405c-b13b-516db8e4122a/large_behind-scenes.webp",
+                           "medium":  "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/688430ad-2154-405c-b13b-516db8e4122a/medium_behind-scenes.webp"
+                       }
+    }
+]

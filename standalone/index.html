@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neha's Evento — Luxury Wedding Planning in Jaipur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream: #fffdfa;
+    --ink: #333333;
+    --ink-soft: #666666;
+    --line: #cccccc;
+    --white: #ffffff;
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "Kumbh Sans", system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; background: none; border: none; color: inherit; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .prose { font-size: 15px; line-height: 1.7; color: var(--ink-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    padding: 0 36px;
+    border: 1px solid var(--ink);
+    background: var(--cream);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: letter-spacing 0.4s ease, background 0.4s ease, color 0.4s ease;
+  }
+  .btn:hover { letter-spacing: 0.14em; background: var(--ink); color: var(--cream); }
+  .btn.solid { width: 100%; border: 0; background: var(--cream); color: var(--ink); font-size: 18px; letter-spacing: 0; }
+  .btn.full { width: 100%; }
+
+  /* Nav */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: #fff;
+    border-bottom: 1px solid rgba(51,51,51,0.05);
+  }
+  .nav-inner {
+    max-width: 1600px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 16px;
+  }
+  @media (min-width: 768px) { .nav-inner { padding: 24px 40px; } }
+  @media (min-width: 1024px) { .nav-inner { padding: 24px 56px; } }
+  .logo {
+    font-family: var(--serif);
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .nav-links { display: none; gap: 28px; }
+  @media (min-width: 1024px) { .nav-links { display: flex; } }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    transition: opacity 0.3s;
+  }
+  .nav-links a:hover { opacity: 0.55; }
+  .menu-btn {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  @media (min-width: 1024px) { .menu-btn { display: none; } }
+  .menu-btn span {
+    display: block; width: 20px; height: 1px; background: var(--ink);
+    transition: transform 0.3s;
+  }
+  .menu-btn span + span { margin-top: 6px; }
+  .menu-btn.open span:first-child { transform: translateY(3.5px) rotate(45deg); }
+  .menu-btn.open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 45;
+    background: var(--cream);
+    flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: var(--serif); font-size: 32px; }
+
+  /* Hero */
+  .hero { position: relative; height: 100svh; overflow: hidden; }
+  .hero-mobile {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 84px 16px 40px; color: #fff;
+  }
+  .hero-mobile video, .hero-mobile .scrim {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }
+  .hero-mobile .scrim { background: rgba(51,51,51,0.25); }
+  .hero-mobile h1 {
+    position: relative; z-index: 1;
+    font-family: var(--serif); font-size: 38px; font-weight: 400; line-height: 1.2; margin: 0;
+  }
+  .hero-mobile .bottom { position: relative; z-index: 1; }
+  .hero-mobile p { font-size: 18px; line-height: 1.2; max-width: 358px; margin: 0 0 24px; }
+  .hero-desktop { display: none; width: 100%; height: 100%; max-width: 1200px; margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .hero-mobile { display: none; }
+    .hero-desktop { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+  .hero-video { position: relative; height: 100%; overflow: hidden; }
+  .hero-video video { width: 100%; height: 100%; object-fit: cover; }
+  .hero-copy {
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 132px 0 48px 48px;
+  }
+  .hero-copy h1 {
+    font-family: var(--serif); font-size: 44px; font-weight: 400; line-height: 1.2; margin: 0;
+  }
+  .hero-copy .prose { margin: 24px 0 0; max-width: 420px; }
+  .hero-copy .cta { margin-top: 40px; }
+  .hero-quote { max-width: 360px; align-self: flex-end; }
+  .hero-quote p { margin: 0; font-family: var(--serif); font-size: 15px; font-style: italic; line-height: 1.5; }
+  .hero-quote .name { margin-top: 16px; font-size: 13px; font-weight: 500; font-style: normal; font-family: var(--sans); }
+  .hero-quote .role { font-size: 12px; color: var(--ink-soft); font-family: var(--sans); font-style: normal; }
+
+  /* Sticky intro */
+  .sticky-block { position: relative; }
+  .sticky-intro {
+    position: sticky; top: 0; z-index: 0;
+    min-height: 100svh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 96px 24px; text-align: center;
+  }
+  .sticky-intro .inner { max-width: 640px; }
+  .sticky-intro h2 {
+    font-family: var(--serif); font-size: clamp(36px, 4vw, 44px);
+    font-weight: 400; line-height: 1.15; margin: 24px 0 0;
+  }
+  .sticky-intro .prose { margin: 24px auto 0; max-width: 520px; }
+  .sticky-content { position: relative; z-index: 1; background: var(--cream); padding: 96px 24px; }
+
+  /* Cards */
+  .card-stack { display: flex; flex-direction: column; gap: 64px; align-items: center; }
+  .scroll-card {
+    width: 100%; max-width: 600px;
+    will-change: transform, opacity;
+    transform: translateY(56px) scale(0.9); opacity: 0.35;
+    transform-origin: center center;
+  }
+  .scroll-card.wide { max-width: none; }
+
+  /* In-view reveals (StickyIntro / process / CTAs) */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
+  [data-reveal].in { opacity: 1; transform: none; }
+  [data-reveal-img] {
+    opacity: 0;
+    transform: translateY(72px) scale(0.85) rotate(var(--tilt, 1deg));
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform, opacity;
+  }
+  [data-reveal-img].in {
+    opacity: 1;
+    transform: translateY(0) scale(0.9) rotate(var(--tilt, 1deg));
+  }
+
+  /* Hero entrance */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+  }
+  .hero-mobile h1,
+  .hero-mobile .bottom,
+  .hero-copy > div:first-child,
+  .hero-quote {
+    opacity: 0;
+    animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .hero-mobile .bottom { animation-delay: 0.12s; }
+  .hero-copy > div:first-child { animation-delay: 0.08s; }
+  .hero-quote { animation-delay: 0.22s; }
+  .service-card {
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(51,51,51,0.05);
+  }
+  .service-card .media { position: relative; aspect-ratio: 600 / 714; overflow: hidden; }
+  .service-card .media img { width: 100%; height: 100%; object-fit: cover; }
+  .service-card .badge {
+    position: absolute; left: 20px; top: 20px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #fff; display: grid; place-items: center;
+    font-family: var(--serif); font-size: 18px;
+  }
+  .service-card .body { padding: 40px; }
+  .service-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 0; }
+  .service-card .prose { margin-top: 16px; }
+
+  .center { text-align: center; }
+  .mt-16 { margin-top: 64px; }
+
+  /* Process — Wedora timeline */
+  .process {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 1024px) { .process { padding: 0 40px; } }
+  .process-line {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0; bottom: 16px; left: 50%;
+    width: 1px; transform: translateX(-50%);
+  }
+  @media (min-width: 768px) { .process-line { display: block; } }
+  .process-line .track { position: absolute; inset: 0; background: rgba(204,204,204,0.35); }
+  .process-line .fill {
+    position: absolute; top: 0; left: 0; width: 1px; height: 100%;
+    background: rgba(51,51,51,0.7);
+    transform-origin: top center;
+    transform: scaleY(0);
+    will-change: transform;
+  }
+  .process-line .dot {
+    position: absolute; bottom: 0; left: 50%;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: rgba(51,51,51,0.7);
+    transform: translate(-50%, 50%);
+    opacity: 0;
+  }
+  .step {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; gap: 24px;
+    min-height: 300px; padding: 48px 0;
+  }
+  @media (min-width: 768px) {
+    .step {
+      flex-direction: row; align-items: center;
+      min-height: 360px; padding: 0;
+    }
+  }
+  .step-side {
+    display: flex; justify-content: center; width: 100%;
+  }
+  @media (min-width: 768px) {
+    .step-side { width: calc(50% - 1.25rem); }
+    .step-side.img-left { order: 1; justify-content: flex-start; }
+    .step-side.img-right { order: 3; justify-content: flex-end; }
+    .step-side.copy-left { order: 1; justify-content: flex-end; padding-right: 100px; text-align: right; }
+    .step-side.copy-right { order: 3; justify-content: flex-start; padding-left: 100px; text-align: left; }
+  }
+  .step-img {
+    width: 214px; height: 214px;
+    box-shadow: 0 10px 20px rgba(51,51,51,0.05); overflow: hidden;
+    flex-shrink: 0;
+  }
+  @media (min-width: 768px) { .step-img { width: 234px; height: 234px; } }
+  .step-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .step-num {
+    order: 2; z-index: 2;
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center; flex-shrink: 0;
+    background: var(--cream);
+    font-family: var(--serif); font-size: 28px; font-style: italic; line-height: 1;
+  }
+  @media (min-width: 768px) { .step-num { font-size: 32px; } }
+  .step-copy { width: 100%; max-width: 360px; text-align: center; }
+  @media (min-width: 768px) { .step-copy { text-align: inherit; } }
+  .step-copy h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 0 0 12px; line-height: 1.2; }
+  .step-copy p { margin: 0; font-size: 16px; font-weight: 300; line-height: 1.2; color: rgba(51,51,51,0.8); }
+
+  /* Portfolio grid */
+  .grid-3 {
+    display: grid; gap: 40px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  @media (min-width: 768px) { .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+  .port-card .media { aspect-ratio: 3/4; overflow: hidden; background: #fafafa; }
+  .port-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+  .port-card:hover img { transform: scale(1.05); }
+  .port-card h3 {
+    margin: 20px 0 0; font-family: var(--serif); font-size: 22px; font-weight: 400;
+  }
+
+  /* Team */
+  .team-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .team-card { text-align: center; }
+  .team-card .media { aspect-ratio: 226 / 495; overflow: hidden; }
+  @media (min-width: 768px) { .team-card .media { aspect-ratio: 395 / 927; } }
+  .team-card img { width: 100%; height: 100%; object-fit: cover; }
+  .team-card .name { margin: 20px 0 0; font-family: var(--serif); font-size: 18px; }
+  @media (min-width: 768px) { .team-card .name { font-size: 22px; } }
+  .team-card .role { margin: 4px 0 0; font-size: 12px; }
+
+  /* Reviews */
+  .reviews { position: relative; height: 200svh; }
+  .reviews-sticky {
+    position: sticky; top: 0; height: 100svh; overflow: hidden; background: var(--cream);
+  }
+  .reviews-track {
+    display: flex; height: 100%;
+    transition: transform 1.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .review-slide {
+    position: relative; flex: 0 0 100%; height: 100%;
+  }
+  @media (min-width: 768px) {
+    .review-slide { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+  .review-photo { position: absolute; inset: 0; overflow: hidden; }
+  @media (min-width: 768px) {
+    .review-photo { position: relative; order: 2; }
+  }
+  .review-photo-inner {
+    position: absolute; inset-inline: 0; top: -11%;
+    width: 100%; height: 122%;
+    will-change: transform;
+  }
+  .review-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .review-photo::after {
+    content: ""; position: absolute; inset: 0; background: rgba(51,51,51,0.2);
+  }
+  @media (min-width: 768px) { .review-photo::after { display: none; } }
+  .review-quote {
+    position: relative; z-index: 1; height: 100%;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 132px 16px 48px; color: #fff;
+  }
+  @media (min-width: 768px) {
+    .review-quote {
+      color: var(--ink); padding: 132px 48px 48px 24px; order: 1;
+    }
+  }
+  .review-quote p {
+    margin: 0; max-width: 552px;
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(28px, 4vw, 60px); line-height: 1.2;
+  }
+  .review-quote .who {
+    font-style: normal; font-size: 18px; align-self: flex-end;
+  }
+  @media (min-width: 768px) { .review-quote .who { font-size: 24px; } }
+  .review-arrows {
+    position: absolute; z-index: 5; left: 16px; bottom: 48px;
+    display: flex; gap: 24px;
+  }
+  @media (min-width: 768px) { .review-arrows { left: 0; color: var(--ink); } }
+  .review-arrows button {
+    width: 28px; height: 28px; color: #fff; opacity: 0.9;
+  }
+  @media (min-width: 768px) { .review-arrows button { color: var(--ink); } }
+  .review-arrows button:hover { opacity: 0.5; }
+
+  /* Pricing */
+  .pricing-grid {
+    display: grid; gap: 2px; max-width: 1200px; margin: 0 auto;
+  }
+  @media (min-width: 768px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+  .price-card {
+    position: relative; isolation: isolate; min-height: 640px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 48px 32px; text-align: center; background: #fff; overflow: hidden;
+  }
+  @media (min-width: 768px) { .price-card { min-height: 889px; padding: 48px; } }
+  .price-card .art {
+    position: absolute; inset: 0; z-index: 0;
+    pointer-events: none; overflow: hidden;
+  }
+  .price-card .art-inner {
+    position: absolute; inset: -12%;
+    will-change: transform;
+  }
+  .price-card .art img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: bottom; opacity: 0.28;
+    mask-image: linear-gradient(0deg, #000 5%, transparent 58%);
+    -webkit-mask-image: linear-gradient(0deg, #000 5%, transparent 58%);
+  }
+  .price-card .body,
+  .price-card .btn {
+    position: relative; z-index: 2;
+  }
+  .price-card .body {
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex; flex-direction: column; align-items: center; gap: 24px;
+  }
+  .price-card h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 0; }
+  .price-card .label { font-size: 12px; font-weight: 300; margin: 0; }
+  .price-card .amount {
+    font-family: var(--serif); font-size: 32px; font-style: italic;
+    margin: 4px 0 0; line-height: 1;
+  }
+  .price-card .desc { font-size: 16px; font-weight: 300; line-height: 1.35; margin: 0; }
+  .price-card .btn {
+    margin-top: 64px;
+    background: var(--cream);
+  }
+  .price-card .btn:hover {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  /* FAQ */
+  .faq { max-width: 720px; margin: 0 auto; padding: 96px 24px; }
+  .faq h2 {
+    font-family: var(--serif); font-size: clamp(32px, 4vw, 44px);
+    font-weight: 400; text-align: center; margin: 16px 0 48px;
+  }
+  .faq-item { border-bottom: 1px solid rgba(204,204,204,0.5); }
+  .faq-q {
+    width: 100%; text-align: left;
+    display: flex; justify-content: space-between; gap: 16px;
+    padding: 20px 0; font-size: 16px; font-weight: 400;
+  }
+  .faq-a {
+    display: none; padding: 0 0 20px;
+    font-size: 15px; line-height: 1.7; color: var(--ink-soft);
+  }
+  .faq-item.open .faq-a { display: block; }
+
+  /* CTA */
+  .cta-band {
+    position: relative; padding: 128px 24px; text-align: center; overflow: hidden;
+  }
+  .cta-band .bg {
+    position: absolute; inset: 0;
+  }
+  .cta-band .bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.2; }
+  .cta-band .bg::after {
+    content: ""; position: absolute; inset: 0; background: rgba(255,253,250,0.8);
+  }
+  .cta-band .inner { position: relative; max-width: 640px; margin: 0 auto; }
+  .cta-band h2 {
+    font-family: var(--serif); font-size: clamp(36px, 4vw, 48px);
+    font-weight: 400; margin: 0 0 24px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 64px 24px 40px; border-top: 1px solid rgba(204,204,204,0.4);
+    text-align: center; font-size: 13px; color: var(--ink-soft);
+  }
+  footer .brand {
+    font-family: var(--serif); font-size: 18px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink); margin-bottom: 16px;
+  }
+  footer .links { display: flex; justify-content: center; gap: 24px; margin: 24px 0; flex-wrap: wrap; }
+  footer .links a:hover { opacity: 0.6; }
+
+  .section-pad { padding-left: 24px; padding-right: 24px; }
+  .quote-lg {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(28px, 3.5vw, 36px); line-height: 1.35; margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">NEHA'S EVENTO</a>
+    <nav class="nav-links">
+      <a href="#top">HOME</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#services">SERVICES</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#blog">BLOG</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" type="button">
+      <div><span></span><span></span></div>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#top">HOME</a>
+  <a href="#about">ABOUT US</a>
+  <a href="#services">SERVICES</a>
+  <a href="#portfolio">PORTFOLIO</a>
+  <a href="#blog">BLOG</a>
+  <a href="#contact">CONTACT</a>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-mobile">
+      <video id="heroVidMobile" autoplay muted loop playsinline poster="https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/hero-poster.webp">
+        <source src="https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="scrim"></div>
+      <h1>Where Every Celebration<br />Becomes a Timeless Story.</h1>
+      <div class="bottom">
+        <p>Luxury wedding planning for the modern romantic — based in Jaipur, where elegance meets emotion, and every detail tells your story.</p>
+        <a class="btn solid" href="#contact">Plan Your Wedding</a>
+      </div>
+    </div>
+    <div class="hero-desktop">
+      <div class="hero-video">
+        <video id="heroVidDesktop" autoplay muted loop playsinline poster="https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/hero-poster.webp">
+          <source src="https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-copy">
+        <div>
+          <h1>Where Every Celebration<br />Becomes a Timeless Story.</h1>
+          <p class="prose">Luxury wedding planning for the modern romantic — based in Jaipur, where elegance meets emotion, and every detail tells your story.</p>
+          <div class="cta"><a class="btn" href="#contact">Plan Your Wedding</a></div>
+        </div>
+        <div class="hero-quote">
+          <p>“We don’t just plan events, we craft memories that last a lifetime.”</p>
+          <p class="name">Neha</p>
+          <p class="role">Founder &amp; Creative Director</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sticky-block" id="services">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal>
+        <p class="eyebrow">Services Overview</p>
+        <h2>From Concept to Celebration</h2>
+        <p class="prose">At Neha’s Evento, we don’t just plan weddings — we craft deeply personal experiences. Whether you’re envisioning an intimate gathering or a grand destination celebration, our team ensures every detail reflects your unique story.</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <div class="card-stack" id="serviceCards"></div>
+      <div class="center mt-16" data-reveal><a class="btn" href="#services">View Details</a></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sticky-block">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal>
+        <p class="eyebrow">How It Works</p>
+        <h2>The Neha Experience</h2>
+        <p class="prose">Our approach is thoughtful, tailored, and gracefully organized — so you can be fully present for every moment.</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <div class="process" id="processRoot">
+        <div class="process-line" aria-hidden="true">
+          <div class="track"></div>
+          <div class="fill" id="processFill"></div>
+          <div class="dot" id="processDot"></div>
+        </div>
+        <div id="processSteps"></div>
+      </div>
+      <div class="center mt-16" data-reveal>
+        <p class="quote-lg">“Let’s start your journey together.”</p>
+        <div style="margin-top:32px"><a class="btn" href="#contact">Plan Your Wedding</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="sticky-block" id="portfolio">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal>
+        <p class="eyebrow">Featured Weddings</p>
+        <p class="quote-lg" style="margin-top:24px">“When a wedding becomes a memory, it should still take your breath away.”</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <div class="grid-3" id="portfolioGrid"></div>
+      <div class="center mt-16" data-reveal><a class="btn" href="#portfolio">View Our Portfolio</a></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sticky-block" id="about">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal style="max-width:1104px">
+        <p class="eyebrow" style="text-transform:none;letter-spacing:0">About Us</p>
+        <h2>Behind Every Wedding Is a Soul</h2>
+        <p class="prose">Neha’s Evento was born from a love of intimacy, craftsmanship, and meaning — because a celebration should feel like the people it honors.</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <p class="quote-lg center" data-reveal style="max-width:900px;margin:0 auto 64px">At Neha’s Evento, we craft weddings that feel lived-in, not staged — quiet, meaningful moments rooted in your story, not someone else’s trends.</p>
+      <div class="team-grid" id="teamGrid"></div>
+      <div class="center mt-16" data-reveal><a class="btn" href="#about">More about Us</a></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="reviews-sticky">
+      <div class="reviews-track" id="reviewTrack"></div>
+      <div class="review-arrows">
+        <button type="button" id="revPrev" aria-label="Previous">
+          <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M6 1L1 6l5 5M1 6h18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" id="revNext" aria-label="Next">
+          <svg width="20" height="12" viewBox="0 0 20 12" fill="none"><path d="M14 1l5 5-5 5M19 6H1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="sticky-block" id="pricing">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal>
+        <p class="eyebrow">Pricing Packages</p>
+        <h2>An Investment in Story, Not Just a Day</h2>
+        <p class="prose">Because the right hands don’t just plan — they preserve.</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <div class="pricing-grid" id="pricingGrid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div data-reveal>
+      <p class="eyebrow center">Questions and Answers</p>
+      <h2>A Few Things You Might Be Wondering</h2>
+    </div>
+    <div id="faqList"></div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="sticky-block" id="blog">
+    <div class="sticky-intro">
+      <div class="inner" data-reveal>
+        <p class="eyebrow">Blog Articles</p>
+        <p class="quote-lg" style="margin-top:24px">“Slow reflections from a life spent honoring the unforgettable.”</p>
+      </div>
+    </div>
+    <div class="sticky-content">
+      <div class="grid-3" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band" id="contact">
+    <div class="bg"><img src="https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/43d5e709-4a05-4546-84dd-9fcb0ba0b8e7/sheesh-mahal.webp" alt="" /></div>
+    <div class="inner" data-reveal>
+      <h2>Ready to Begin, Gently?</h2>
+      <p class="prose" style="margin:0 auto 40px;max-width:520px">Your wedding is more than a date. It’s a rhythm, a story, a feeling waiting to be shaped. If you’re drawn to intentional design, honest beauty, and moments that linger — we’d be honored to help bring it to life.</p>
+      <a class="btn" href="mailto:contact@nehaevent.com">Plan Your Wedding</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="brand">NEHA'S EVENTO</div>
+  <p>56, Amritpuri Patrakar Colony, Mansarovar, Jaipur<br />+91 99289 53600 · contact@nehaevent.com</p>
+  <div class="links">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">YouTube</a>
+  </div>
+  <p>© 2026 Neha's Evento</p>
+</footer>
+
+<script>
+/* Storebox media CDN — extracted from API */
+const MEDIA = {
+  "hero.mp4": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/21a00231-31b3-48b4-a323-e64c1e3223e9/hero.mp4",
+  "hero-poster.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e149a31f-b6a5-4521-94ad-d3169a29a5bd/hero-poster.webp",
+  "welcome.jpeg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/81993a85-3384-43f3-b1a3-407037f75f8a/welcome.jpeg",
+  "sheesh-mahal.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/43d5e709-4a05-4546-84dd-9fcb0ba0b8e7/sheesh-mahal.webp",
+  "shaam-shandar.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/02535239-df21-4975-8eee-1c21af6bd072/shaam-shandar.webp",
+  "royal-divinity.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/ee69f014-8c93-4ae2-bc1c-3e954f973596/royal-divinity.webp",
+  "rajvada.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/690ee733-4157-4ee1-9d6a-1f1775cf269a/rajvada.webp",
+  "portrait.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/71e252ba-075e-4f35-b40d-b76944380d9d/portrait.webp",
+  "love-ishq.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/8a695aa2-caa2-48ab-a9eb-d3b7ae10c496/love-ishq.webp",
+  "garden-of-eden.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/fd7970cb-b34a-42e6-aad0-9c0d32b6c309/garden-of-eden.webp",
+  "behind-scenes.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/688430ad-2154-405c-b13b-516db8e4122a/behind-scenes.webp",
+  "banner.webp": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/9523d049-257a-4c12-941a-1a7c26f58356/banner.webp",
+  "floral-1.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/76b1d542-b654-4eae-84c6-322552a27b7d/floral-1.jpg",
+  "floral-2.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/635728b0-988a-4baf-8c5e-3a4f6e24230d/floral-2.jpg",
+  "floral-3.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/e7d0d332-1b45-4679-bf5e-70d85b31aab7/floral-3.jpg",
+  "review-1.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/2b29af99-ae86-44ee-89a8-21ecf70e9d64/review-1.jpg",
+  "review-2.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/19cea865-1bac-4c70-a48f-2950c4afd688/review-2.jpg",
+  "review-3.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/b527df2e-570a-44bd-9ca7-80a6af99d2bf/review-3.jpg",
+  "review-4.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/668017f0-adbd-4e02-9b4e-40d206392db7/review-4.jpg",
+  "review-5.jpg": "https://admin.storebox.ai/media/430cbb5d-7118-4045-b522-aca276376ff2/f46ab895-df2e-4df2-8457-6ca854f1e70d/review-5.jpg",
+};
+
+const services = [
+  { n:"1", title:"Full Wedding Planning", body:"From concept to execution, we handle every detail of your celebration — timeline, logistics, styling, and beyond.", img: MEDIA["royal-divinity.webp"] },
+  { n:"2", title:"Styling & Design", body:"Cohesive and elevated visual storytelling that reflects your personality and vision, down to the last petal.", img: MEDIA["garden-of-eden.webp"] },
+  { n:"3", title:"Venue & Vendor Coordination", body:"We help you discover, vet, and manage the perfect team of creatives for your day — stress-free and seamless.", img: MEDIA["shaam-shandar.webp"] },
+  { n:"4", title:"Day-of Coordination", body:"Our team ensures everything flows smoothly on your big day, so you can focus on what matters most.", img: MEDIA["sheesh-mahal.webp"] },
+  { n:"5", title:"Destination Weddings", body:"Planning beyond your city? We handle destination logistics with the same care, elegance, and attention to detail.", img: MEDIA["rajvada.webp"] },
+];
+
+const processSteps = [
+  { n:"1", title:"Discovery & Consultation", body:"We begin with a warm, in-depth conversation to understand your vision, priorities, and style. This is where your story begins.", img: MEDIA["portrait.webp"] },
+  { n:"2", title:"Vision & Planning", body:"We curate a tailored plan and visual direction, outlining everything from timeline to budget — all with elegant precision.", img: MEDIA["love-ishq.webp"] },
+  { n:"3", title:"Design & Curation", body:"We craft your wedding aesthetic through bespoke styling, floral direction, and vendor collaborations that bring your story to life.", img: MEDIA["behind-scenes.webp"] },
+  { n:"4", title:"Coordination & Logistics", body:"From managing vendors to building a master timeline, we handle the behind-the-scenes so your day unfolds flawlessly.", img: MEDIA["banner.webp"] },
+  { n:"5", title:"Wedding Day Execution", body:"We’re there from the first light to the final dance — ensuring every detail flows effortlessly, just as you imagined.", img: MEDIA["hero-poster.webp"] },
+];
+
+const portfolio = [
+  { title:"Royal Divinity", img: MEDIA["royal-divinity.webp"] },
+  { title:"Shaam Shandar", img: MEDIA["shaam-shandar.webp"] },
+  { title:"Garden of Eden", img: MEDIA["garden-of-eden.webp"] },
+];
+
+const team = [
+  { name:"Neha", role:"Founder & Creative Director", img: MEDIA["portrait.webp"] },
+  { name:"Creative Studio", role:"Design & Styling", img: MEDIA["behind-scenes.webp"] },
+  { name:"Production Team", role:"Coordination & Logistics", img: MEDIA["welcome.jpeg"] },
+];
+
+const reviews = [
+  { quote:"I’m fascinated by your professionalism and the way you handled everything.", name:"Rohit Agrawal", img: MEDIA["review-1.jpg"] },
+  { quote:"Every event was excellently executed — from the first ritual to the final farewell.", name:"Vishal Soni", img: MEDIA["review-2.jpg"] },
+  { quote:"Every guest was so happy — from airport pickup to the final drop.", name:"Umesh Agarwal", img: MEDIA["review-3.jpg"] },
+  { quote:"She understands her clients perfectly. Everything was just perfect.", name:"Shreya Patodia", img: MEDIA["review-4.jpg"] },
+  { quote:"Professional, poised and gracious — they enjoyed their day without a worry.", name:"Sahiba Saraf", img: MEDIA["review-5.jpg"] },
+];
+
+const pricing = [
+  { title:"Foundations", label:"Starts at", price:"₹2,50,000", body:"Ideal for intimate gatherings and focused celebrations. Design consultation, timeline planning, and key vendor curation.", img: MEDIA["floral-1.jpg"] },
+  { title:"Signature", label:"Starts at", price:"₹6,00,000", body:"Full-service planning for medium to large weddings, including styling, vendor management, day-of coordination, and design direction.", img: MEDIA["floral-2.jpg"] },
+  { title:"Estate", label:"Plan type", price:"Custom", body:"Bespoke destination weddings or multi-day experiences. Includes venue scouting, immersive design concepts, travel logistics, and on-site presence.", img: MEDIA["floral-3.jpg"] },
+];
+
+const faqs = [
+  { q:"Do you only plan weddings in Jaipur?", a:"Not at all. While Jaipur is our home and one of our favourite destinations, we design and manage celebrations across India and at selected international destinations — with the same care and attention to detail." },
+  { q:"How far in advance should we contact you?", a:"Ideally, 8–12 months before your wedding allows the greatest flexibility with venues and vendors. We’ve also successfully planned celebrations with much shorter timelines." },
+  { q:"Will Neha personally be involved in our wedding?", a:"Yes. Every celebration is personally overseen by Neha. From the initial consultation through the final farewell, she remains closely involved to ensure every detail reflects your vision." },
+  { q:"Can you help even if we’ve already booked our venue?", a:"Absolutely. Whether you’ve booked your venue or are starting from scratch, we can step in at any stage and build the remaining celebration around your existing arrangements." },
+  { q:"Do you offer complete wedding planning or individual services?", a:"Both. Some couples prefer end-to-end planning, while others engage us for destination management, décor design, guest hospitality, logistics, or on-ground coordination." },
+  { q:"Can you work within our budget?", a:"Yes. Every wedding is planned around your priorities and budget. We focus on exceptional experiences while allocating resources thoughtfully and transparently." },
+];
+
+const blog = [
+  { title:"The Quiet Before the Vows", img: MEDIA["garden-of-eden.webp"] },
+  { title:"Designing with Restraint", img: MEDIA["shaam-shandar.webp"] },
+  { title:"A Ceremony in Three Acts", img: MEDIA["royal-divinity.webp"] },
+];
+
+/* Render */
+document.getElementById("serviceCards").innerHTML = services.map((s, i) => `
+  <div class="scroll-card" data-card data-tilt="${i % 2 === 0 ? 0.85 : -0.85}">
+    <article class="service-card">
+      <div class="media"><img src="${s.img}" alt="${s.title}" loading="lazy" /><span class="badge">${s.n}</span></div>
+      <div class="body"><h3>${s.title}</h3><p class="prose">${s.body}</p></div>
+    </article>
+  </div>`).join("");
+
+document.getElementById("processSteps").innerHTML = processSteps.map((s, i) => {
+  const imageLeft = i % 2 === 0;
+  const tilt = imageLeft ? 1 : -1;
+  return `
+  <div class="step">
+    <div class="step-side ${imageLeft ? "img-left" : "img-right"}">
+      <div class="step-img" data-reveal-img style="--tilt:${tilt}deg"><img src="${s.img}" alt="" loading="lazy" /></div>
+    </div>
+    <div class="step-num" data-reveal>${s.n}</div>
+    <div class="step-side ${imageLeft ? "copy-right" : "copy-left"}">
+      <div class="step-copy" data-reveal><h3>${s.title}</h3><p>${s.body}</p></div>
+    </div>
+  </div>`;
+}).join("");
+
+document.getElementById("portfolioGrid").innerHTML = portfolio.map((p, i) => `
+  <a class="port-card scroll-card wide" data-card data-tilt="${i % 2 === 0 ? 0.85 : -0.85}" href="#portfolio">
+    <div class="media"><img src="${p.img}" alt="${p.title}" loading="lazy" /></div>
+    <h3>${p.title}</h3>
+  </a>`).join("");
+
+document.getElementById("teamGrid").innerHTML = team.map((t, i) => `
+  <div class="team-card scroll-card wide" data-card data-tilt="${i % 2 === 0 ? 0.85 : -0.85}">
+    <div class="media"><img src="${t.img}" alt="${t.name}" loading="lazy" /></div>
+    <p class="name">${t.name}</p>
+    <p class="role">${t.role}</p>
+  </div>`).join("");
+
+document.getElementById("reviewTrack").innerHTML = reviews.map(r => `
+  <article class="review-slide">
+    <div class="review-photo"><div class="review-photo-inner"><img src="${r.img}" alt="" /></div></div>
+    <div class="review-quote">
+      <p>“${r.quote}”</p>
+      <p class="who">${r.name}</p>
+    </div>
+  </article>`).join("");
+
+document.getElementById("pricingGrid").innerHTML = pricing.map((p, i) => `
+  <div class="scroll-card wide" data-card data-tilt="${i % 2 === 0 ? 0.85 : -0.85}">
+    <article class="price-card" data-price-card>
+      <div class="art" aria-hidden="true"><div class="art-inner"><img src="${p.img}" alt="" /></div></div>
+      <div class="body">
+        <h3>${p.title}</h3>
+        <div>
+          <p class="label">${p.label}</p>
+          <p class="amount">${p.price}</p>
+        </div>
+        <p class="desc">${p.body}</p>
+      </div>
+      <a class="btn full" href="#contact">Book a Consultation</a>
+    </article>
+  </div>`).join("");
+
+document.getElementById("faqList").innerHTML = faqs.map((f, i) => `
+  <div class="faq-item${i === 0 ? " open" : ""}" data-reveal>
+    <button class="faq-q" type="button">${f.q}<span>+</span></button>
+    <div class="faq-a">${f.a}</div>
+  </div>`).join("");
+
+document.getElementById("blogGrid").innerHTML = blog.map((b, i) => `
+  <a class="port-card scroll-card wide" data-card data-tilt="${i % 2 === 0 ? 0.85 : -0.85}" href="#blog">
+    <div class="media"><img src="${b.img}" alt="${b.title}" loading="lazy" /></div>
+    <h3>${b.title}</h3>
+  </a>`).join("");
+
+/* Mobile menu */
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+menuBtn.addEventListener("click", () => {
+  const open = mobileMenu.classList.toggle("open");
+  menuBtn.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+});
+mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  mobileMenu.classList.remove("open");
+  menuBtn.classList.remove("open");
+}));
+
+/* FAQ */
+document.getElementById("faqList").addEventListener("click", (e) => {
+  const btn = e.target.closest(".faq-q");
+  if (!btn) return;
+  const item = btn.parentElement;
+  const open = item.classList.contains("open");
+  document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+  if (!open) item.classList.add("open");
+});
+
+/* Reviews slider + parallax */
+let revIndex = 0;
+const revTrack = document.getElementById("reviewTrack");
+const revSection = document.querySelector(".reviews");
+const revInners = () => document.querySelectorAll(".review-photo-inner");
+const revCount = reviews.length;
+function goReview(dir) {
+  revIndex = (revIndex + dir + revCount) % revCount;
+  revTrack.style.transform = `translateX(-${revIndex * 100}%)`;
+}
+document.getElementById("revPrev").addEventListener("click", () => goReview(-1));
+document.getElementById("revNext").addEventListener("click", () => goReview(1));
+
+/* Motion helpers — match Framer ScrollCard / Reveal */
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+function interp(p, stops, values) {
+  if (p <= stops[0]) return values[0];
+  if (p >= stops[stops.length - 1]) return values[values.length - 1];
+  for (let i = 0; i < stops.length - 1; i++) {
+    if (p <= stops[i + 1]) {
+      const t = (p - stops[i]) / (stops[i + 1] - stops[i] || 1);
+      return lerp(values[i], values[i + 1], t);
+    }
+  }
+  return values[values.length - 1];
+}
+
+/** Framer useScroll offsets: start end → center center → end start */
+function scrollProgress(el) {
+  const r = el.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const center = r.top + r.height / 2;
+  const start = vh + r.height / 2;
+  const mid = vh / 2;
+  const end = -r.height / 2;
+  if (center >= mid) {
+    return clamp(0.5 * (1 - (center - mid) / (start - mid || 1)), 0, 0.5);
+  }
+  return clamp(0.5 + 0.5 * ((mid - center) / (mid - end || 1)), 0.5, 1);
+}
+
+function updateScrollCards() {
+  document.querySelectorAll("[data-card]").forEach((el) => {
+    const p = scrollProgress(el);
+    const tilt = Number(el.dataset.tilt || 0.85);
+    const scale = interp(p, [0, 0.35, 0.5, 0.7, 1], [0.9, 0.97, 1, 0.96, 0.9]);
+    const opacity = interp(p, [0, 0.28, 0.5, 0.72, 1], [0.35, 0.9, 1, 0.85, 0.3]);
+    const rotate = interp(p, [0, 0.5, 1], [tilt, 0, -tilt * 0.45]);
+    const y = interp(p, [0, 0.5, 1], [56, 0, -28]);
+    el.style.transform = `translateY(${y}px) rotate(${rotate}deg) scale(${scale})`;
+    el.style.opacity = String(opacity);
+  });
+
+  /* Pricing art soft parallax (start end → end start) */
+  document.querySelectorAll("[data-price-card]").forEach((card) => {
+    const r = card.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const p = clamp((vh - r.top) / (vh + r.height || 1), 0, 1);
+    const inner = card.querySelector(".art-inner");
+    if (!inner) return;
+    const y = lerp(48, -24, p);
+    const s = lerp(1.12, 1, p);
+    inner.style.transform = `translate3d(0, ${y}px, 0) scale(${s})`;
+  });
+}
+
+function updateReviewParallax() {
+  if (!revSection) return;
+  const r = revSection.getBoundingClientRect();
+  const travel = Math.max(1, revSection.offsetHeight - window.innerHeight);
+  const p = clamp(-r.top / travel, 0, 1);
+  const y = lerp(70, -90, p);
+  revInners().forEach((el) => { el.style.transform = `translate3d(0, ${y}px, 0)`; });
+}
+
+const processRoot = document.getElementById("processRoot");
+const processFill = document.getElementById("processFill");
+const processDot = document.getElementById("processDot");
+function updateProcessLine() {
+  if (!processRoot || !processFill) return;
+  const r = processRoot.getBoundingClientRect();
+  const vh = window.innerHeight;
+  // Framer: offset ["start 0.75", "end 0.5"]
+  const start = vh * 0.75 - r.top;
+  const range = r.height + vh * 0.25;
+  const p = clamp(start / (range || 1), 0, 1);
+  processFill.style.transform = `scaleY(${p})`;
+  if (processDot) processDot.style.opacity = String(p);
+}
+
+/* Reveal on enter (once) — IO + scroll fallback so steps never stay invisible */
+function revealEl(el) {
+  if (!el || el.classList.contains("in")) return;
+  el.classList.add("in");
+}
+const revealObs = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      revealEl(entry.target);
+      revealObs.unobserve(entry.target);
+    });
+  },
+  { rootMargin: "0px 0px -10% 0px", threshold: 0.05 }
+);
+function revealVisible() {
+  document.querySelectorAll("[data-reveal]:not(.in), [data-reveal-img]:not(.in)").forEach((el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.92 && r.bottom > window.innerHeight * 0.05) {
+      revealEl(el);
+      revealObs.unobserve(el);
+    }
+  });
+}
+document.querySelectorAll("[data-reveal], [data-reveal-img]").forEach((el) => revealObs.observe(el));
+revealVisible();
+
+let ticking = false;
+function onScroll() {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    updateScrollCards();
+    updateReviewParallax();
+    updateProcessLine();
+    revealVisible();
+    ticking = false;
+  });
+}
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("resize", onScroll);
+updateScrollCards();
+updateReviewParallax();
+updateProcessLine();
+</script>
+</body>
+</html>
