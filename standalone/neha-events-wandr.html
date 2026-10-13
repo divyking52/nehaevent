@@ -1,0 +1,2935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neha's Evento — Luxury Wedding Planning in Jaipur</title>
+<meta name="description" content="Luxury wedding planning for the modern romantic — based in Jaipur, where elegance meets emotion, and every detail tells your story." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Gilda+Display&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #fbfbfa;
+    --paper-soft: #f3f1eb;
+    --ink: #1a2421;
+    --ink-soft: #525252;
+    --ink-mute: #7a7a7a;
+    --line: #e4e1d8;
+    --sage: #5e6b5a;
+    --sage-deep: #3d4a3a;
+    --white: #ffffff;
+    --serif: "Gilda Display", Georgia, serif;
+    --sans: "DM Sans", system-ui, sans-serif;
+    --nav-h: 72px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button, input, textarea, select {
+    font: inherit;
+    color: inherit;
+  }
+  button { cursor: pointer; background: none; border: none; padding: 0; }
+  h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 0; }
+  p { margin: 0; }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 28px;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease), transform 0.35s var(--ease);
+  }
+  .btn:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--white); }
+  .btn-light {
+    background: var(--white);
+    color: var(--ink);
+    border-color: var(--white);
+  }
+  .btn-light:hover { background: transparent; color: var(--white); }
+
+  /* Reveal */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  }
+  [data-reveal].in { opacity: 1; transform: none; }
+  [data-reveal-delay="1"] { transition-delay: 0.1s; }
+  [data-reveal-delay="2"] { transition-delay: 0.2s; }
+  [data-reveal-delay="3"] { transition-delay: 0.3s; }
+
+  /* Nav — Wandr layout: logo | centered links | pill CTA */
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .nav.scrolled {
+    background: #fbfbfa;
+    box-shadow: none;
+  }
+  .nav-inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    transition: color 0.3s;
+    justify-self: start;
+  }
+  .nav.scrolled .logo { color: var(--ink); }
+  .nav-links {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+  .nav-links a {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.95);
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .nav-links a:hover { opacity: 0.7; }
+  .nav.scrolled .nav-links a { color: var(--ink); }
+  .nav-cta-wrap {
+    justify-self: end;
+    display: none;
+  }
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--white);
+    color: var(--ink);
+    border: none;
+    transition: transform 0.3s var(--ease), opacity 0.3s;
+  }
+  .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+  .nav.scrolled .nav-cta {
+    background: var(--ink);
+    color: var(--white);
+  }
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    justify-self: end;
+    grid-column: 3;
+  }
+  .menu-btn span {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--white);
+    transition: transform 0.3s, background 0.3s, opacity 0.3s;
+  }
+  .nav.scrolled .menu-btn span { background: var(--ink); }
+  .menu-btn.open span:first-child { transform: translateY(3.75px) rotate(45deg); }
+  .menu-btn.open span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
+  @media (min-width: 900px) {
+    .nav-links, .nav-cta-wrap { display: flex; }
+    .menu-btn { display: none; }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s var(--ease);
+  }
+  .mobile-menu.open { opacity: 1; pointer-events: auto; }
+  .mobile-menu a {
+    font-family: var(--serif);
+    font-size: 32px;
+  }
+
+  /* Hero — Wandr: soft blur overlay at bottom */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    background: var(--paper);
+    overflow: hidden;
+    z-index: 2;
+  }
+  .hero-media {
+    position: absolute;
+    inset: -8% 0;
+    height: 116%;
+    will-change: transform;
+  }
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.6s ease;
+  }
+  .hero-slide.is-active { opacity: 1; }
+  .hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    transform: scale(1.08);
+    transition: transform 8s var(--ease);
+  }
+  .hero-slide.is-active img { transform: scale(1); }
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(10,16,20,0.28) 0%, rgba(10,16,20,0.12) 35%, rgba(10,16,20,0.45) 100%);
+  }
+  /* Soft white bottom fade — same asset + blur as Wandr */
+  .hero-curve {
+    position: absolute;
+    left: -180px;
+    right: -180px;
+    bottom: -40px;
+    height: 151px;
+    z-index: 3;
+    pointer-events: none;
+    background: url("./hero-blur-overlay.png") center / cover no-repeat;
+    filter: blur(13px);
+  }
+  .hero-curve svg { display: none; }
+  .hero-content {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 28px) 28px clamp(100px, 12vw, 140px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    will-change: transform, opacity;
+  }
+  .hero-mid {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 24px 0 40px;
+  }
+  .hero-row {
+    width: 100%;
+    display: grid;
+    gap: 28px;
+    align-items: end;
+  }
+  @media (min-width: 900px) {
+    .hero-row {
+      grid-template-columns: minmax(0, 680px);
+      align-items: start;
+    }
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px 8px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.9s var(--ease) 0.1s forwards;
+  }
+  .hero-badge svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  .hero h1 {
+    margin-top: 22px;
+    font-size: clamp(42px, 6.4vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 1s var(--ease) 0.2s forwards;
+  }
+  .hero h1 span { display: block; }
+  .hero-lead {
+    max-width: 28ch;
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s var(--ease) 0.35s forwards;
+  }
+  @media (min-width: 900px) {
+    .hero-lead {
+      margin-top: 22px;
+      max-width: 42ch;
+    }
+  }
+
+  /* Bottom glass info bar */
+  .hero-glass {
+    width: min(100%, 720px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s var(--ease) 0.5s forwards;
+  }
+  .hero-glass-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .hero-glass-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-glass-loc {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.95);
+  }
+  .hero-glass-divider {
+    width: 1px;
+    align-self: stretch;
+    background: rgba(255,255,255,0.35);
+    flex-shrink: 0;
+  }
+  .hero-glass-date {
+    flex-shrink: 0;
+    text-align: center;
+    padding-right: 6px;
+  }
+  .hero-glass-date strong {
+    display: block;
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .hero-glass-date span {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .hero-content { padding-bottom: 150px; }
+    .hero-curve {
+      left: -100px;
+      right: -100px;
+      bottom: -28px;
+      height: 120px;
+    }
+    .hero-glass {
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px;
+    }
+    .hero-glass-divider { display: none; }
+    .hero-glass-loc { flex-basis: calc(100% - 74px); }
+    .hero-glass-date {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+      gap: 10px;
+      text-align: left;
+      padding: 0;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 10px;
+    }
+    .hero-glass-date strong { font-size: 32px; }
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Sections */
+  .section {
+    padding: 96px 24px;
+  }
+  @media (min-width: 900px) {
+    .section { padding: 120px 24px; }
+  }
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 56px;
+  }
+  .section-head h2 {
+    margin-top: 14px;
+    font-size: clamp(34px, 4.5vw, 48px);
+  }
+  .section-head p {
+    margin-top: 18px;
+    color: var(--ink-soft);
+  }
+
+  /* Intro + inward-circle carousel (below hero) */
+  .intro-band {
+    position: relative;
+    z-index: 1;
+    background: var(--paper);
+    margin-top: -1px;
+    padding: 64px 24px 0;
+    text-align: center;
+  }
+  .intro-copy {
+    max-width: 680px;
+    margin: 0 auto 40px;
+  }
+  .intro-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px 8px 10px;
+    border-radius: 999px;
+    background: #efefef;
+    border: 1px solid transparent;
+    font-size: 13px;
+    color: var(--ink);
+    margin-bottom: 28px;
+    transition: opacity 0.4s ease;
+  }
+  .intro-badge svg {
+    width: 20px;
+    height: 20px;
+  }
+  .intro-copy h2,
+  .intro-highlight {
+    font-family: var(--serif);
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--ink);
+    max-width: 22ch;
+    margin: 0 auto;
+  }
+  /* Word highlight on scroll — weight/color steps up */
+  .intro-highlight .w {
+    display: inline;
+    color: #d4d4d4;
+    font-weight: 300;
+    transition: color 0.22s ease, font-weight 0.22s ease, text-shadow 0.22s ease;
+  }
+  .intro-highlight .w.is-on {
+    color: var(--ink);
+    font-weight: 600;
+    text-shadow: 0 0 0.01px var(--ink);
+  }
+  .intro-copy .btn-pill {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 28px;
+    border-radius: 999px;
+    background: #6b8fad;
+    color: var(--white);
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s, opacity 0.5s;
+    opacity: 0.35;
+  }
+  .intro-copy .btn-pill.is-ready {
+    opacity: 1;
+  }
+  .intro-copy .btn-pill:hover {
+    background: #557892;
+    transform: translateY(-1px);
+  }
+
+  /* Inward cylinder carousel */
+  .curve-carousel {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: 8px;
+    padding: 0 0 72px;
+    --peach: #f3e4d4;
+  }
+  .curve-carousel-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 48px;
+    bottom: 0;
+    background: var(--peach);
+    clip-path: url(#carouselWaveClip);
+    pointer-events: none;
+  }
+  .cylinder-stage {
+    position: relative;
+    z-index: 1;
+    height: clamp(280px, 42vw, 420px);
+    perspective: 900px;
+    perspective-origin: 50% 50%;
+    overflow: hidden;
+    cursor: grab;
+  }
+  .cylinder-stage:active { cursor: grabbing; }
+  .cylinder-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: max-content;
+    padding: 40px 0;
+    transform-style: preserve-3d;
+    will-change: left;
+  }
+  .cylinder-item {
+    flex: 0 0 auto;
+    width: clamp(150px, 16vw, 210px);
+    aspect-ratio: 3 / 4;
+    transform-style: preserve-3d;
+  }
+  .cylinder-face {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #ddd;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    will-change: transform;
+    box-shadow: 0 18px 40px rgba(40, 24, 12, 0.12);
+  }
+  .cylinder-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide img { transition: none; transform: none; }
+    .intro-anim {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Our Story — Wandr reference layout */
+  .story-section {
+    position: relative;
+    z-index: 1;
+    padding: 96px 24px 140px;
+    background: #fff;
+  }
+  .story-section .section-inner { max-width: 1120px; }
+  .story-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px 40px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #ececec;
+  }
+  .story-tab {
+    position: relative;
+    padding: 0 0 16px;
+    border: 0;
+    background: none;
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.2vw, 22px);
+    color: #c5c5c5;
+    transition: color 0.3s;
+  }
+  .story-tab:hover { color: #888; }
+  .story-tab.active { color: var(--ink); }
+  .story-tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1.5px;
+    background: var(--ink);
+  }
+  .story-layout {
+    display: grid;
+    gap: 40px;
+    align-items: stretch;
+  }
+  @media (min-width: 900px) {
+    .story-layout {
+      grid-template-columns: 1fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+    }
+  }
+  .story-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 460px;
+  }
+  .story-body {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+  }
+  .story-thumb {
+    width: 120px;
+    height: 120px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #eee;
+  }
+  .story-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story-meta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .story-meta-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--ink);
+  }
+  .story-year {
+    font-family: var(--serif);
+    font-size: clamp(64px, 8vw, 96px);
+    line-height: 0.85;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .story-stage {
+    position: relative;
+    background: #0d0d0d;
+    border-radius: 28px;
+    min-height: clamp(340px, 48vw, 480px);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    padding: 40px 24px;
+  }
+  .story-marquee {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-2deg);
+    z-index: 1;
+    background: #f5e642;
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .story-marquee-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    animation: storyMarquee 18s linear infinite;
+    will-change: transform;
+  }
+  .story-marquee-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    font-family: var(--sans);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #111;
+    text-transform: none;
+  }
+  .story-marquee-track .heart {
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid #111;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .story-marquee-track .heart svg {
+    width: 11px;
+    height: 11px;
+  }
+  @keyframes storyMarquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .story-portrait {
+    position: relative;
+    z-index: 2;
+    width: min(58%, 260px);
+    aspect-ratio: 3/4;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #222;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  }
+  .story-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.45s var(--ease), transform 0.55s var(--ease);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .story-marquee-track { animation: none; }
+  }
+
+  /* Save the Date — one continuous soft arc (Wandr).
+     Bottom blur fringe is covered by countdown sitting above it. */
+  .celebrate {
+    position: relative;
+    z-index: 1;
+    margin-top: 140px;
+    background: transparent;
+    color: #fff;
+    padding: 168px 20px 64px;
+    overflow: visible;
+  }
+  @media (min-width: 900px) {
+    .celebrate {
+      margin-top: 180px;
+      padding: 200px 32px 72px;
+    }
+  }
+  .celebrate-arc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -80px;
+    bottom: -80px;
+    background: #000;
+    border-radius: 200px 200px 0 0;
+    filter: blur(11px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media (min-width: 900px) {
+    .celebrate-arc {
+      top: -100px;
+      border-radius: 360px 360px 0 0;
+    }
+  }
+  @media (min-width: 1200px) {
+    .celebrate-arc {
+      border-radius: 480px 480px 0 0;
+    }
+  }
+  .celebrate-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .celebrate-body {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 0;
+  }
+  .celebrate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 28px;
+    padding: 8px 16px 8px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .celebrate-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+  .celebrate-head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .celebrate-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #fff;
+  }
+  .celebrate-cards {
+    display: grid;
+    gap: 16px;
+    align-items: stretch;
+  }
+  @media (min-width: 900px) {
+    .celebrate-cards {
+      grid-template-columns: 0.9fr 1.2fr 0.9fr;
+      gap: 18px;
+      align-items: center;
+    }
+  }
+  .cel-card {
+    background: #f3f3f1;
+    color: #111;
+    border-radius: 28px;
+    padding: 28px 24px 32px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .cel-card-hero {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 360px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+  }
+  @media (min-width: 900px) {
+    .cel-card { min-height: 340px; }
+    .cel-card-hero {
+      min-height: 440px;
+      transform: scale(1.05);
+      z-index: 1;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    }
+  }
+  .cel-card-hero .cel-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .cel-card-hero .cel-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.58) 100%);
+  }
+  .cel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    filter: blur(18px) saturate(1.05);
+    transform: scale(1.08);
+    transition:
+      opacity 1.4s ease,
+      filter 1.4s ease,
+      transform 1.8s var(--ease);
+  }
+  .cel-slide.is-active {
+    opacity: 1;
+    filter: blur(0) saturate(1);
+    transform: scale(1);
+    z-index: 1;
+  }
+  .cel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cel-card,
+  .cel-card-hero {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateY(28px) scale(0.96);
+    transition:
+      opacity 0.9s var(--ease),
+      filter 0.9s var(--ease),
+      transform 0.9s var(--ease);
+  }
+  .celebrate.is-inview .cel-card,
+  .celebrate.is-inview .cel-card-hero {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+  .celebrate.is-inview .cel-card:nth-child(1) { transition-delay: 0.05s; }
+  .celebrate.is-inview .cel-card-hero { transition-delay: 0.18s; }
+  .celebrate.is-inview .cel-card:nth-child(3) { transition-delay: 0.3s; }
+  .cel-card-hero .cel-mono,
+  .cel-card-hero .cel-caption,
+  .cel-card-hero .cel-rule {
+    position: relative;
+    z-index: 1;
+  }
+  .cel-mono {
+    font-family: var(--serif);
+    font-size: clamp(42px, 5vw, 56px);
+    line-height: 1;
+  }
+  .cel-rule {
+    width: 1px;
+    height: 64px;
+    margin: 18px 0 auto 6px;
+    background: rgba(255,255,255,0.65);
+  }
+  .cel-caption {
+    max-width: 14ch;
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 28px);
+    line-height: 1.2;
+  }
+  .cel-vline {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+    width: 1px;
+    height: 52px;
+    background: rgba(0,0,0,0.18);
+  }
+  .cel-day {
+    font-family: var(--serif);
+    font-size: clamp(64px, 7vw, 88px);
+    line-height: 0.9;
+    margin-bottom: 10px;
+  }
+  .cel-when {
+    font-size: 14px;
+    line-height: 1.45;
+    color: #333;
+    margin-bottom: auto;
+  }
+  .cel-pill {
+    display: inline-flex;
+    align-self: flex-start;
+    margin-top: 24px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #e8e8e6;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #222;
+    max-width: 100%;
+  }
+  .cel-time {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  /* Countdown — solid black above the arc's bottom blur fringe */
+  .countdown {
+    position: relative;
+    z-index: 2;
+    margin-top: -48px;
+    padding: 96px 24px 96px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+  }
+  .countdown-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 0 auto 28px;
+    padding: 10px 18px 10px 12px;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .countdown-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+  .countdown-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .countdown-num {
+    font-family: var(--serif);
+    font-size: clamp(72px, 14vw, 120px);
+    line-height: 1;
+    color: #fff;
+  }
+  .countdown-label {
+    font-family: var(--serif);
+    font-size: clamp(40px, 7vw, 64px);
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .countdown-note {
+    margin-top: 22px;
+    color: rgba(255,255,255,0.62);
+    font-size: 15px;
+  }
+
+  /* Process story — Wandr timeline scroll */
+  .process-story {
+    background: #000;
+    color: #fff;
+    margin-top: -1px;
+    padding: 72px 24px 120px;
+    position: relative;
+  }
+  .process-story-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 64px;
+  }
+  .process-story-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 8px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .process-story-badge svg { width: 18px; height: 18px; }
+  .process-story-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 52px);
+    margin-bottom: 16px;
+  }
+  .process-story-head p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .process-track {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 8px 0 24px;
+  }
+  .process-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.18);
+    transform: translateX(-50%);
+  }
+  .process-line-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transform-origin: top center;
+  }
+  .process-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 36px 0 72px;
+    align-items: start;
+  }
+  .process-dot {
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: background 0.35s, box-shadow 0.35s, transform 0.35s;
+  }
+  .process-step.is-active .process-dot {
+    background: #fff;
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.15);
+    transform: translateX(-50%) scale(1.15);
+  }
+  .process-copy,
+  .process-media {
+    opacity: 0.25;
+    filter: blur(10px);
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s var(--ease),
+      filter 0.7s var(--ease),
+      transform 0.7s var(--ease);
+  }
+  .process-step.is-active .process-copy,
+  .process-step.is-active .process-media {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+  /* left = copy left / media right ; right = mirrored */
+  .process-step.is-left .process-copy {
+    grid-column: 1;
+    text-align: right;
+    padding-right: 36px;
+  }
+  .process-step.is-left .process-media {
+    grid-column: 2;
+    padding-left: 36px;
+  }
+  .process-step.is-right .process-media {
+    grid-column: 1;
+    padding-right: 36px;
+  }
+  .process-step.is-right .process-copy {
+    grid-column: 2;
+    text-align: left;
+    padding-left: 36px;
+  }
+  .process-time {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 10px;
+  }
+  .process-copy h3 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: 10px;
+  }
+  .process-copy p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.7);
+    max-width: 34ch;
+  }
+  .process-step.is-left .process-copy p { margin-left: auto; }
+  .process-media {
+    width: min(100%, 220px);
+  }
+  .process-step.is-right .process-media { margin-left: auto; }
+  .process-media img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+  }
+  @media (max-width: 800px) {
+    .process-line { left: 18px; }
+    .process-dot { left: 18px; }
+    .process-step {
+      grid-template-columns: 1fr;
+      padding-left: 44px;
+      gap: 16px;
+    }
+    .process-step.is-left .process-copy,
+    .process-step.is-right .process-copy,
+    .process-step.is-left .process-media,
+    .process-step.is-right .process-media {
+      grid-column: 1;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+    .process-step.is-left .process-copy p { margin-left: 0; }
+    .process-media { width: min(100%, 260px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cel-slide,
+    .cel-card,
+    .cel-card-hero,
+    .process-copy,
+    .process-media {
+      transition: none;
+      filter: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Featured Weddings — Wandr "What to Wear" layout */
+  .featured-wear {
+    background: #000;
+    color: #fff;
+    padding: 96px 24px 120px;
+  }
+  .featured-wear-inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  /* Sticky title that fades while gallery scrolls past */
+  .featured-wear-head {
+    position: sticky;
+    top: 96px;
+    z-index: 3;
+    max-width: 520px;
+    margin: 0 auto 48px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: opacity, transform;
+  }
+  .featured-wear-head.is-in {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.9s var(--ease);
+  }
+  .featured-wear-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px 10px 12px;
+    border-radius: 999px;
+    background: #f2f4f7;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+  .featured-wear-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+  .featured-wear-head h2 {
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  .featured-wear-head > p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.62);
+  }
+  .featured-wear-gallery {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding-top: 24px;
+  }
+  @media (min-width: 900px) {
+    .featured-wear-gallery {
+      grid-template-columns: repeat(2, minmax(0, 456px));
+      justify-content: space-between;
+      gap: 48px 40px;
+      align-items: start;
+      padding-top: 40px;
+    }
+    .fw-item--right {
+      margin-top: clamp(160px, 22vw, 320px);
+    }
+    .fw-item--wide {
+      grid-column: 1 / -1;
+      width: min(711px, 100%);
+      margin: 28px auto 0;
+    }
+  }
+  /* Scroll-linked float + blur reveal (Wandr What to Wear) */
+  .fw-item {
+    --fw-y: 56px;
+    --fw-img-y: 0px;
+    opacity: 0;
+    filter: blur(14px);
+    transform: translate3d(0, var(--fw-y), 0);
+    transition: opacity 0.95s var(--ease), filter 0.95s var(--ease);
+    will-change: transform, opacity, filter;
+  }
+  .fw-item.is-in {
+    opacity: 1;
+    filter: blur(0);
+  }
+  .fw-item a {
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #1a1a1a;
+  }
+  .fw-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 456 / 489;
+    object-fit: cover;
+    transform: scale(1.08) translate3d(0, var(--fw-img-y, 0px), 0);
+    will-change: transform;
+  }
+  .fw-item--wide img {
+    aspect-ratio: 711 / 489;
+  }
+  .fw-item p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.62);
+    max-width: 456px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s var(--ease) 0.12s, transform 0.8s var(--ease) 0.12s;
+  }
+  .fw-item.is-in p {
+    opacity: 1;
+    transform: none;
+  }
+  .fw-item--wide p {
+    max-width: 711px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fw-item,
+    .fw-item.is-in,
+    .fw-item p,
+    .fw-item.is-in p,
+    .featured-wear-head,
+    .featured-wear-head.is-in {
+      opacity: 1 !important;
+      filter: none;
+      transform: none;
+      transition: none;
+      position: relative;
+      top: auto;
+    }
+    .fw-item img {
+      transform: none;
+    }
+  }
+
+  /* Continuous black band → above footer */
+  .band-black {
+    background: #000;
+    color: #fff;
+  }
+  .band-black .eyebrow {
+    color: rgba(255,255,255,0.5);
+  }
+  .band-black .section-head h2,
+  .band-black h2,
+  .band-black h3 {
+    color: #fff;
+  }
+  .band-black .section-head p,
+  .band-black .inquire-copy p,
+  .band-black .wear-lead p,
+  .band-black .wear-card p,
+  .band-black .faq-a p {
+    color: rgba(255,255,255,0.62);
+  }
+  .band-black a {
+    color: rgba(255,255,255,0.85);
+  }
+  .band-black a:hover {
+    color: #fff;
+  }
+
+  /* Inquire / RSVP — Wandr two-column */
+  .inquire {
+    background: #000;
+  }
+  .inquire-grid {
+    display: grid;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .inquire-grid {
+      grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.85fr);
+      gap: 48px 80px;
+      align-items: start;
+    }
+  }
+  .inquire-copy h2 {
+    font-size: clamp(42px, 5.8vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 16px;
+    color: #fff;
+  }
+  .inquire-copy > p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+    max-width: 42ch;
+  }
+  .inquire-form-wrap {
+    margin-top: 40px;
+    max-width: 560px;
+  }
+  .form {
+    display: grid;
+    gap: 0;
+  }
+  .form-row {
+    display: grid;
+    gap: 0;
+  }
+  @media (min-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 0 28px;
+    }
+  }
+  .form-field {
+    border-bottom: 1px solid rgba(255,255,255,0.32);
+    padding: 18px 0 14px;
+  }
+  .form input,
+  .form textarea,
+  .form select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    outline: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .form input::placeholder,
+  .form textarea::placeholder {
+    color: rgba(255,255,255,0.55);
+  }
+  .form select {
+    color: rgba(255,255,255,0.55);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='rgba(255,255,255,0.55)' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    padding-right: 22px;
+  }
+  .form select.is-selected,
+  .form select:focus {
+    color: #fff;
+  }
+  .form select option {
+    color: #111;
+    background: #fff;
+  }
+  .form input:focus,
+  .form textarea:focus,
+  .form select:focus {
+    color: #fff;
+  }
+  .form-field:focus-within {
+    border-bottom-color: rgba(255,255,255,0.9);
+  }
+  .form textarea {
+    min-height: 112px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+  .form .btn-submit {
+    justify-self: start;
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border: none;
+    border-radius: 16px;
+    background: #9eb6d4;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .form .btn-submit:hover {
+    background: #8aa7c8;
+    transform: translateY(-1px);
+  }
+  .form-status {
+    min-height: 24px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+  }
+  .inquire-media {
+    display: none;
+  }
+  @media (min-width: 900px) {
+    .inquire-media {
+      display: block;
+      position: relative;
+      padding-top: 8px;
+    }
+    .inquire-media-main {
+      position: sticky;
+      top: 100px;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #111;
+    }
+    .inquire-media-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .inquire-media-thumb {
+      position: absolute;
+      top: -6px;
+      left: -22px;
+      z-index: 2;
+      width: 78px;
+      height: 78px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+      pointer-events: none;
+    }
+    .inquire-media-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  /* Wear / Celebrations */
+  .wear-grid {
+    display: grid;
+    gap: 24px;
+  }
+  @media (min-width: 800px) {
+    .wear-grid { grid-template-columns: 1.1fr 0.9fr 0.9fr; }
+  }
+  .wear-lead {
+    padding-right: 12px;
+  }
+  .wear-lead p {
+    margin-top: 16px;
+  }
+  .wear-card {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 24px;
+  }
+  .wear-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .wear-card p { font-size: 15px; }
+
+  /* FAQ — Wandr two-column */
+  .faq-layout {
+    display: grid;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .faq-layout {
+      grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.2fr);
+      gap: 64px 80px;
+    }
+  }
+  .faq-intro {
+    max-width: 420px;
+  }
+  .faq-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px 10px 12px;
+    border-radius: 999px;
+    background: #f2f4f7;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+  .faq-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+  .faq-intro h2 {
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  .faq-intro > p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.62);
+    max-width: 34ch;
+  }
+  .faq-list {
+    width: 100%;
+  }
+  .faq-item {
+    border-top: 1px solid rgba(255,255,255,0.16);
+  }
+  .faq-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.16); }
+  .faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 0;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .faq-q .icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #9eb6d4;
+    position: relative;
+  }
+  .faq-q .icon::before,
+  .faq-q .icon::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    transition: transform 0.3s var(--ease);
+  }
+  .faq-q .icon::before {
+    left: 11px;
+    right: 11px;
+    top: 50%;
+    height: 2px;
+    margin-top: -1px;
+  }
+  .faq-q .icon::after {
+    top: 11px;
+    bottom: 11px;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px;
+  }
+  .faq-item.open .faq-q .icon::after { transform: scaleY(0); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s var(--ease), padding 0.35s;
+  }
+  .faq-item.open .faq-a {
+    max-height: 280px;
+    padding-bottom: 22px;
+  }
+  .faq-a p {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 54ch;
+    color: rgba(255,255,255,0.62);
+  }
+
+  /* Footer — Wandr white dome on black (soft multi-blur edge) */
+  .site-footer {
+    position: relative;
+    background: #000;
+    padding: 72px 16px 0;
+    overflow: visible;
+  }
+  .footer-dome-soft,
+  .footer-dome-mid,
+  .footer-dome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 120px 120px 0 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* Outer atmosphere — wide soft bleed into black */
+  .footer-dome-soft {
+    left: -4%;
+    right: -4%;
+    top: -8px;
+    filter: blur(52px);
+    opacity: 0.55;
+    transform: scaleX(1.02);
+  }
+  /* Mid feather */
+  .footer-dome-mid {
+    left: -1.5%;
+    right: -1.5%;
+    top: 28px;
+    filter: blur(22px);
+    opacity: 0.9;
+  }
+  /* Primary plate — Wandr-style soft silhouette */
+  .footer-dome {
+    top: 56px;
+    filter: blur(11px);
+    opacity: 1;
+  }
+  @media (min-width: 900px) {
+    .footer-dome-soft,
+    .footer-dome-mid,
+    .footer-dome {
+      border-radius: 280px 280px 0 0;
+    }
+    .footer-dome-soft {
+      top: -24px;
+      filter: blur(64px);
+      opacity: 0.5;
+    }
+    .footer-dome-mid {
+      top: 16px;
+      filter: blur(28px);
+    }
+    .footer-dome {
+      top: 48px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .footer-dome-soft,
+    .footer-dome-mid,
+    .footer-dome {
+      border-radius: 400px 400px 0 0;
+    }
+  }
+  .footer-panel {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 140px 28px 56px;
+    text-align: center;
+    color: #111;
+  }
+  @media (min-width: 900px) {
+    .footer-panel {
+      padding: 180px 40px 72px;
+    }
+  }
+  .footer-panel h2 {
+    font-size: clamp(34px, 5.2vw, 56px);
+    line-height: 1.15;
+    color: #111;
+    max-width: 14ch;
+    margin: 0 auto;
+  }
+  .footer-panel > p {
+    margin: 28px auto 0;
+    font-size: 16px;
+    color: #333;
+  }
+  .footer-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 16px;
+    margin-top: 40px;
+  }
+  .footer-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px 10px 10px;
+    border-radius: 999px;
+    background: #f2f4f7;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .footer-pill:hover {
+    background: #e8ebef;
+    color: #111;
+    transform: translateY(-1px);
+  }
+  .footer-pill-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .footer-pill-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 28px;
+    margin-top: 72px;
+    font-size: 13px;
+  }
+  .footer-links a {
+    color: #555;
+  }
+  .footer-links a:hover {
+    color: #111;
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <clipPath id="carouselWaveClip" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.12 C0.18,0.02 0.35,0 0.5,0.05 C0.68,0.11 0.82,0.16 1,0.06 L1,1 L0,1 Z"></path>
+    </clipPath>
+  </defs>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">N&amp;E</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Our Story</a>
+      <a href="#process">Schedule</a>
+      <a href="#services">Venue</a>
+      <a href="#inquire">RSVP</a>
+    </nav>
+    <div class="nav-cta-wrap">
+      <a class="nav-cta" href="#inquire">I'm coming!</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#story">Our Story</a>
+  <a href="#process">Schedule</a>
+  <a href="#services">Venue</a>
+  <a href="#inquire">RSVP</a>
+  <a href="#faq">FAQ</a>
+</div>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-media" id="heroMedia" aria-hidden="true">
+      <div class="hero-slide is-active">
+        <img src="https://nehaevent.com/wp-content/uploads/2026/06/final-hero-image.webp" alt="" fetchpriority="high" />
+      </div>
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <div class="hero-mid">
+        <div class="hero-row">
+          <div>
+            <div class="hero-badge">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="13" r="6.2" stroke="white" stroke-width="1.4"/>
+                <circle cx="12" cy="13" r="3.6" stroke="white" stroke-width="1.2" stroke-opacity="0.85"/>
+                <path d="M9.2 7.2c0-1.2.9-2.2 2.1-2.2h1.4c1.2 0 2.1 1 2.1 2.2" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              A Celebration of Love
+            </div>
+            <h1>
+              <span>Where Every</span>
+              <span>Celebration Becomes</span>
+              <span>Forever</span>
+            </h1>
+          </div>
+          <p class="hero-lead">
+            Join us as we craft the beginning of your forever with elegance, emotion, and the people you love most.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-glass">
+        <div class="hero-glass-thumb">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/rajvada-angan-final.webp" alt="" />
+        </div>
+        <p class="hero-glass-loc">56, Amritpuri Patrakar Colony,<br />Mansarovar, Jaipur</p>
+        <div class="hero-glass-divider" aria-hidden="true"></div>
+        <div class="hero-glass-date">
+          <strong>26</strong>
+          <span>Winter 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-curve" aria-hidden="true">
+      <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+        <path d="M0,86 C260,50 520,42 720,40 C920,42 1180,50 1440,86 L1440,140 L0,140 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Intro + curved carousel -->
+  <section class="intro-band" id="intro">
+    <div class="intro-copy">
+      <div class="intro-badge">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="13" r="6.2" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="12" cy="13" r="3.6" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <path d="M9.2 7.2c0-1.2.9-2.2 2.1-2.2h1.4c1.2 0 2.1 1 2.1 2.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        A Celebration of Love
+      </div>
+      <h2 class="intro-highlight" id="introHighlight">
+        We’re crafting weddings! Join us this season to plan your special day, explore the schedule, venue, portfolio, and inquiry details.
+      </h2>
+      <div>
+        <a class="btn-pill" id="introCta" href="#inquire">Inquire Now</a>
+      </div>
+    </div>
+
+    <div class="curve-carousel" aria-label="Celebration gallery">
+      <div class="curve-carousel-bg" aria-hidden="true"></div>
+      <div class="cylinder-stage" id="cylinderStage">
+        <div class="cylinder-track" id="cylinderTrack">
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/royal-divinity.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/shaam-shandar.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/Garden-of-Eden.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/rajvada-angan-final.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/Love-Ishq.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/Sheesh-Mahal-Soiree.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/behind-scenes.webp" alt="" /></div></div>
+          <div class="cylinder-item"><div class="cylinder-face"><img src="https://nehaevent.com/wp-content/uploads/2026/06/banner.webp" alt="" /></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="story-section" id="story">
+    <div class="section-inner">
+      <div class="story-tabs" role="tablist" aria-label="Our story">
+        <button class="story-tab active" role="tab" aria-selected="true" data-story="0">The Beginning</button>
+        <button class="story-tab" role="tab" aria-selected="false" data-story="1">The Craft</button>
+        <button class="story-tab" role="tab" aria-selected="false" data-story="2">The Celebration</button>
+      </div>
+
+      <div class="story-layout">
+        <div class="story-left">
+          <p class="story-body" id="storyBody">
+            Every beautiful celebration has a beginning. Ours started with a belief that weddings should feel honest — shaped by presence, memory, and the people you love, not by someone else’s trends.
+          </p>
+          <div class="story-thumb">
+            <img id="storyThumb" src="https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp" alt="" />
+          </div>
+          <div class="story-meta">
+            <span class="story-meta-title" id="storyTitle">The Beginning</span>
+            <span class="story-year" id="storyYear">2018</span>
+          </div>
+        </div>
+
+        <div class="story-stage">
+          <div class="story-marquee" aria-hidden="true">
+            <div class="story-marquee-track" id="storyMarquee">
+              <!-- filled by JS -->
+            </div>
+          </div>
+          <div class="story-portrait">
+            <img id="storyImage" src="https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp" alt="Neha, Founder & Creative Director" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Save the Date / A Celebration to Remember -->
+  <section class="celebrate" id="services">
+    <div class="celebrate-arc" aria-hidden="true"></div>
+    <div class="celebrate-inner">
+      <div class="celebrate-head" data-reveal>
+        <div class="celebrate-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3.5" y="5" width="17" height="15" rx="3" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M8 3.5v3M16 3.5v3M3.5 10h17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          Save the Date
+        </div>
+        <h2>A Celebration to<br />Remember</h2>
+      </div>
+
+      <div class="celebrate-cards">
+        <article class="cel-card">
+          <div class="cel-day">26</div>
+          <div class="cel-when">
+            Winter Season<br />
+            Destination Weekends
+          </div>
+          <div class="cel-pill">Mansarovar, Jaipur · Planning Studio</div>
+          <span class="cel-vline" aria-hidden="true"></span>
+        </article>
+
+        <article class="cel-card-hero">
+          <div class="cel-bg" aria-hidden="true" id="celSlides">
+            <div class="cel-slide is-active">
+              <img src="https://nehaevent.com/wp-content/uploads/2026/06/Garden-of-Eden.webp" alt="" />
+            </div>
+            <div class="cel-slide">
+              <img src="https://nehaevent.com/wp-content/uploads/2026/06/shaam-shandar.webp" alt="" />
+            </div>
+            <div class="cel-slide">
+              <img src="https://nehaevent.com/wp-content/uploads/2026/06/royal-divinity.webp" alt="" />
+            </div>
+            <div class="cel-slide">
+              <img src="https://nehaevent.com/wp-content/uploads/2026/06/Sheesh-Mahal-Soiree.webp" alt="" />
+            </div>
+          </div>
+          <div class="cel-mono">N&amp;E</div>
+          <span class="cel-rule" aria-hidden="true"></span>
+          <p class="cel-caption" id="celCaption">Dinner, Dancing &amp; A Celebration to Remember</p>
+        </article>
+
+        <article class="cel-card">
+          <div class="cel-time">Evening Receptions</div>
+          <div class="cel-when" style="margin-bottom:auto">
+            Styling, florals &amp; guest hospitality — crafted end to end.
+          </div>
+          <div class="cel-pill">Palace · Garden · Destination Villas</div>
+          <span class="cel-vline" aria-hidden="true"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown" id="countdown">
+    <div data-reveal>
+      <div class="countdown-badge">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M12 7.5v5l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        Counting Down To Your Season
+      </div>
+      <div class="countdown-row">
+        <div class="countdown-num" id="daysLeft">—</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <p class="countdown-note">Now booking destination weddings across India for Winter 2026.</p>
+    </div>
+  </section>
+
+  <!-- Process story scroll -->
+  <section class="process-story" id="process">
+    <div class="process-story-head" data-reveal>
+      <div class="process-story-badge">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M12 7.5v5l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        Process
+      </div>
+      <h2>The Neha Experience</h2>
+      <p>
+        A thoughtfully paced journey — filled with clarity, emotion, and unforgettable craft.
+        Here’s how your celebration unfolds with us.
+      </p>
+    </div>
+
+    <div class="process-track" id="processTrack">
+      <div class="process-line" aria-hidden="true">
+        <div class="process-line-progress" id="processProgress"></div>
+      </div>
+
+      <article class="process-step is-left" data-process-step>
+        <span class="process-dot" aria-hidden="true"></span>
+        <div class="process-copy">
+          <p class="process-time">Step 01</p>
+          <h3>Discovery &amp; Consultation</h3>
+          <p>A warm conversation to understand your vision, priorities, and style. This is where your story begins.</p>
+        </div>
+        <div class="process-media">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp" alt="" />
+        </div>
+      </article>
+
+      <article class="process-step is-right" data-process-step>
+        <span class="process-dot" aria-hidden="true"></span>
+        <div class="process-copy">
+          <p class="process-time">Step 02</p>
+          <h3>Vision &amp; Planning</h3>
+          <p>A tailored plan and visual direction — timeline to budget — shaped with elegant precision.</p>
+        </div>
+        <div class="process-media">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/Love-Ishq.webp" alt="" />
+        </div>
+      </article>
+
+      <article class="process-step is-left" data-process-step>
+        <span class="process-dot" aria-hidden="true"></span>
+        <div class="process-copy">
+          <p class="process-time">Step 03</p>
+          <h3>Design &amp; Curation</h3>
+          <p>Bespoke styling, floral direction, and vendor collaborations that bring your story to life.</p>
+        </div>
+        <div class="process-media">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/behind-scenes.webp" alt="" />
+        </div>
+      </article>
+
+      <article class="process-step is-right" data-process-step>
+        <span class="process-dot" aria-hidden="true"></span>
+        <div class="process-copy">
+          <p class="process-time">Step 04</p>
+          <h3>Coordination &amp; Logistics</h3>
+          <p>Vendor management and a master timeline — so the day unfolds flawlessly behind the scenes.</p>
+        </div>
+        <div class="process-media">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/banner.webp" alt="" />
+        </div>
+      </article>
+
+      <article class="process-step is-left" data-process-step>
+        <span class="process-dot" aria-hidden="true"></span>
+        <div class="process-copy">
+          <p class="process-time">Step 05</p>
+          <h3>Wedding Day Execution</h3>
+          <p>From first light to the final dance — every detail flowing effortlessly, just as you imagined.</p>
+        </div>
+        <div class="process-media">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/final-hero-image.webp" alt="" />
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Featured Weddings — Wandr What to Wear layout -->
+  <section class="featured-wear" id="portfolio">
+    <div class="featured-wear-inner">
+      <div class="featured-wear-head" data-fw-head>
+        <div class="featured-wear-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          Featured
+        </div>
+        <h2>Celebrations to Remember</h2>
+        <p>
+          When a wedding becomes a memory, it should still take your breath away —
+          heritage courtyards, twilight evenings, and garden atmospheres crafted with care.
+        </p>
+      </div>
+      <div class="featured-wear-gallery">
+        <article class="fw-item fw-item--left" data-fw-item data-fw-speed="0.18">
+          <a href="#inquire">
+            <img src="https://nehaevent.com/wp-content/uploads/2026/06/royal-divinity.webp" alt="Royal Divinity wedding" />
+          </a>
+          <p>
+            Royal Divinity — heritage luxury in Jaipur courtyards, shaped with quiet grandeur
+            and meticulous ceremonial detail.
+          </p>
+        </article>
+        <article class="fw-item fw-item--right" data-fw-item data-fw-speed="-0.14">
+          <a href="#inquire">
+            <img src="https://nehaevent.com/wp-content/uploads/2026/06/shaam-shandar.webp" alt="Shaam Shandar wedding" />
+          </a>
+          <p>
+            Shaam Shandar — twilight romance and golden-hour atmospheres guests still talk about
+            long after the final dance.
+          </p>
+        </article>
+        <article class="fw-item fw-item--wide" data-fw-item data-fw-speed="0.1">
+          <a href="#inquire">
+            <img src="https://nehaevent.com/wp-content/uploads/2026/06/Garden-of-Eden.webp" alt="Garden of Eden wedding" />
+          </a>
+          <p>
+            Garden of Eden — open-sky romance with florals, soft light, and a celebration that
+            feels intimate even at scale.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquire / RSVP — Wandr layout -->
+  <section class="section inquire band-black" id="inquire">
+    <div class="section-inner inquire-grid">
+      <div class="inquire-main" data-reveal>
+        <div class="inquire-copy">
+          <h2>Will You Begin With Us?</h2>
+          <p>
+            Share a little about your celebration. We’ll reply personally —
+            usually within a few days — and find a gentle next step together.
+          </p>
+        </div>
+        <div class="inquire-form-wrap">
+          <form class="form" id="inquireForm">
+            <div class="form-row">
+              <div class="form-field">
+                <input type="text" name="name" placeholder="Name" required />
+              </div>
+              <div class="form-field">
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="tel" name="phone" placeholder="Phone" />
+            </div>
+            <div class="form-field">
+              <input type="text" name="date" placeholder="Wedding Date (approx.)" />
+            </div>
+            <div class="form-field">
+              <select name="service" aria-label="Service interest">
+                <option value="" selected>Service Interest</option>
+                <option>Full Wedding Planning</option>
+                <option>Styling &amp; Design</option>
+                <option>Destination Wedding</option>
+                <option>Day-of Coordination</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <textarea name="message" placeholder="Wishes"></textarea>
+            </div>
+            <button class="btn-submit" type="submit">Submit</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+      <aside class="inquire-media" data-reveal data-reveal-delay="1" aria-hidden="true">
+        <div class="inquire-media-thumb">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/Garden-of-Eden.webp" alt="" />
+        </div>
+        <div class="inquire-media-main">
+          <img src="https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp" alt="" />
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section band-black" id="celebrations">
+    <div class="section-inner">
+      <div class="wear-grid">
+        <div class="wear-lead" data-reveal>
+          <p class="eyebrow">Celebrations</p>
+          <h2 style="font-size:clamp(34px,4.5vw,48px);margin-top:14px">What We Craft</h2>
+          <p>
+            From welcome evenings to the final reception toast — each chapter designed with
+            its own atmosphere, while remaining one continuous story.
+          </p>
+        </div>
+        <div class="wear-card" data-reveal data-reveal-delay="1">
+          <h3>Rituals &amp; Ceremony</h3>
+          <p>
+            Mehndi, Haldi, Sangeet, and the wedding ceremony — vibrant colour, tradition,
+            and quiet moments shaped with meticulous care.
+          </p>
+        </div>
+        <div class="wear-card" data-reveal data-reveal-delay="2">
+          <h3>Receptions &amp; Evenings</h3>
+          <p>
+            Dinner, dancing, and atmospheres guests still talk about — light, music,
+            and hospitality that feel effortless.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-black" id="faq">
+    <div class="section-inner faq-layout">
+      <div class="faq-intro" data-reveal>
+        <div class="faq-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M9.6 9.4a2.5 2.5 0 0 1 4.85.8c0 1.5-2.45 2.1-2.45 3.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="16.6" r="0.9" fill="currentColor"/>
+          </svg>
+          FAQs
+        </div>
+        <h2>Question</h2>
+        <p>
+          Here are answers to a few questions we’ve been asked. If you need any help,
+          just send us an email!
+        </p>
+      </div>
+      <div class="faq-list" data-reveal data-reveal-delay="1">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Do you only plan weddings in Jaipur?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Not at all. While Jaipur is our home, we design and manage celebrations across India and at selected international destinations — with the same care and attention to detail.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            How far in advance should we contact you?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Ideally 8–12 months before your wedding allows the greatest flexibility with venues and vendors. We’ve also successfully planned celebrations with much shorter timelines.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Will Neha personally be involved?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. Every celebration is personally overseen by Neha — from the initial consultation through the final farewell.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can you help if we’ve already booked a venue?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Absolutely. Whether you’ve booked your venue or are starting from scratch, we can step in at any stage and build around your existing arrangements.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Do you offer complete planning or individual services?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Both. Some couples prefer end-to-end planning; others engage us for destination management, décor design, guest hospitality, or on-ground coordination.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can you work within our budget?
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. Every wedding is planned around your priorities and budget — with transparent allocation and a focus on exceptional experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-dome-soft" aria-hidden="true"></div>
+  <div class="footer-dome-mid" aria-hidden="true"></div>
+  <div class="footer-dome" aria-hidden="true"></div>
+  <div class="footer-panel" data-reveal>
+    <h2>A celebration of love, surrounded by the people who matter most.</h2>
+    <p>We can’t wait to share this moment with you.</p>
+    <div class="footer-contact">
+      <a class="footer-pill" href="tel:+919928953600">
+        <span class="footer-pill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7.5 4.5h2.2l1.1 3.2-1.4 1.4a12.5 12.5 0 0 0 5.5 5.5l1.4-1.4 3.2 1.1v2.2A2.2 2.2 0 0 1 17.3 19 13.8 13.8 0 0 1 5 6.7 2.2 2.2 0 0 1 7.5 4.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        +91 99289 53600
+      </a>
+      <a class="footer-pill" href="mailto:contact@nehaevent.com">
+        <span class="footer-pill-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m5 8 7 5 7-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        contact@nehaevent.com
+      </a>
+    </div>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="#">Licensing</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Changelog</a>
+    </nav>
+    <span id="year" hidden></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const nav = document.getElementById("nav");
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const heroMedia = document.getElementById("heroMedia");
+  const heroContent = document.getElementById("heroContent");
+  const heroSlides = Array.from(document.querySelectorAll(".hero-slide"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Nav
+  const syncNav = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+  syncNav();
+
+  menuBtn.addEventListener("click", () => {
+    const open = mobileMenu.classList.toggle("open");
+    menuBtn.classList.toggle("open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuBtn.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    });
+  });
+
+  // Hero crossfade
+  let slideIndex = 0;
+  if (!reduceMotion && heroSlides.length > 1) {
+    setInterval(() => {
+      heroSlides[slideIndex].classList.remove("is-active");
+      slideIndex = (slideIndex + 1) % heroSlides.length;
+      heroSlides[slideIndex].classList.add("is-active");
+    }, 5200);
+  }
+
+  // Intro word-highlight on scroll (weight/color steps up)
+  const introBand = document.getElementById("intro");
+  const introHighlight = document.getElementById("introHighlight");
+  const introCta = document.getElementById("introCta");
+  let introWords = [];
+
+  if (introHighlight) {
+    const raw = introHighlight.textContent.trim().replace(/\s+/g, " ");
+    introHighlight.innerHTML = raw
+      .split(" ")
+      .map((word) => `<span class="w">${word}</span>`)
+      .join(" ");
+    introWords = Array.from(introHighlight.querySelectorAll(".w"));
+  }
+
+  const updateIntroHighlight = () => {
+    if (!introBand || !introWords.length) return;
+    const rect = introBand.getBoundingClientRect();
+    const vh = window.innerHeight || 1;
+    const start = vh * 0.82;
+    const end = vh * 0.18;
+    const progress = Math.max(0, Math.min(1, (start - rect.top) / (start - end)));
+    const lit = Math.floor(progress * introWords.length + 0.001);
+    introWords.forEach((el, i) => {
+      el.classList.toggle("is-on", i < lit);
+    });
+    if (introCta) introCta.classList.toggle("is-ready", progress > 0.88);
+  };
+
+  // Hero parallax + intro highlight on scroll
+  let ticking = false;
+  const onScroll = () => {
+    syncNav();
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      const h = Math.max(window.innerHeight, 1);
+      const p = Math.min(y / h, 1);
+      if (!reduceMotion) {
+        if (heroMedia) {
+          heroMedia.style.transform = `translate3d(0, ${y * 0.38}px, 0)`;
+        }
+        if (heroContent) {
+          heroContent.style.transform = `translate3d(0, ${y * 0.18}px, 0)`;
+          heroContent.style.opacity = String(Math.max(0, 1 - p * 1.35));
+        }
+      }
+      updateIntroHighlight();
+      updateProcessStory();
+      updateFeaturedWear();
+      ticking = false;
+    });
+  };
+  // Celebrate: blur crossfade slides + entrance
+  const celebrate = document.getElementById("services");
+  const celSlides = Array.from(document.querySelectorAll(".cel-slide"));
+  const celCaption = document.getElementById("celCaption");
+  const celCaptions = [
+    "Dinner, Dancing & A Celebration to Remember",
+    "Twilight florals, warm light, and lasting memory",
+    "Heritage courtyards shaped with quiet luxury",
+    "Mirrored nights and reception atmospheres",
+  ];
+  let celIndex = 0;
+  if (!reduceMotion && celSlides.length > 1) {
+    setInterval(() => {
+      celSlides[celIndex].classList.remove("is-active");
+      celIndex = (celIndex + 1) % celSlides.length;
+      celSlides[celIndex].classList.add("is-active");
+      if (celCaption) celCaption.textContent = celCaptions[celIndex] || celCaptions[0];
+    }, 4200);
+  }
+  if (celebrate && "IntersectionObserver" in window) {
+    const celIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            celebrate.classList.add("is-inview");
+            celIo.unobserve(celebrate);
+          }
+        });
+      },
+      { threshold: 0.22 }
+    );
+    celIo.observe(celebrate);
+  } else if (celebrate) {
+    celebrate.classList.add("is-inview");
+  }
+
+  // Featured celebrations — sticky title fade + scroll float
+  const featuredSection = document.querySelector(".featured-wear");
+  const featuredHead = document.querySelector("[data-fw-head]");
+  const featuredItems = Array.from(document.querySelectorAll("[data-fw-item]"));
+  const FW_STICKY_TOP = 96;
+
+  const updateFeaturedWear = () => {
+    if (!featuredSection || !featuredItems.length) return;
+    const vh = window.innerHeight || 1;
+    const sectionRect = featuredSection.getBoundingClientRect();
+    const sectionH = featuredSection.offsetHeight || 1;
+
+    if (featuredHead) {
+      const entered = sectionRect.top < vh * 0.9;
+      if (entered || reduceMotion) featuredHead.classList.add("is-in");
+
+      if (reduceMotion) {
+        featuredHead.style.opacity = "1";
+      } else {
+        // Fade while sticky — 1 at pin start → 0 toward section end
+        const scrolled = FW_STICKY_TOP - sectionRect.top;
+        const fadeSpan = Math.max(sectionH - vh * 0.85, 400);
+        const t = Math.max(0, Math.min(1, scrolled / fadeSpan));
+        // Hold full opacity briefly, then ease out (matches Wandr)
+        const fade = t < 0.12 ? 0 : (t - 0.12) / 0.88;
+        const opacity = Math.max(0, 1 - fade * 1.05);
+        featuredHead.style.opacity = featuredHead.classList.contains("is-in")
+          ? opacity.toFixed(3)
+          : "0";
+      }
+    }
+
+    featuredItems.forEach((item) => {
+      const rect = item.getBoundingClientRect();
+      const mid = rect.top + rect.height * 0.45;
+      const inView = rect.top < vh * 0.92 && rect.bottom > vh * 0.06;
+      const wasIn = item.classList.contains("is-in");
+      if (inView || reduceMotion) item.classList.add("is-in");
+
+      if (reduceMotion) {
+        item.style.setProperty("--fw-y", "0px");
+        item.style.setProperty("--fw-img-y", "0px");
+        return;
+      }
+
+      const speed = parseFloat(item.dataset.fwSpeed || "0.12");
+      const progress = (vh * 0.5 - mid) / vh;
+      const parallax = Math.max(-90, Math.min(90, progress * speed * 220));
+      const rise = wasIn || inView ? 0 : 56;
+      const y = parallax + rise;
+      const imgY = Math.max(-28, Math.min(28, progress * -speed * 70));
+      item.style.setProperty("--fw-y", `${y.toFixed(1)}px`);
+      item.style.setProperty("--fw-img-y", `${imgY.toFixed(1)}px`);
+    });
+  };
+
+  // Process story scroll: blur reveal + progress line
+  const processTrack = document.getElementById("processTrack");
+  const processProgress = document.getElementById("processProgress");
+  const processSteps = Array.from(document.querySelectorAll("[data-process-step]"));
+
+  const updateProcessStory = () => {
+    if (!processTrack || !processSteps.length) return;
+    const vh = window.innerHeight || 1;
+    const trackRect = processTrack.getBoundingClientRect();
+    const trackTop = window.scrollY + trackRect.top;
+    const trackH = processTrack.offsetHeight || 1;
+    const raw = (window.scrollY + vh * 0.45 - trackTop) / trackH;
+    const progress = Math.max(0, Math.min(1, raw));
+    if (processProgress) processProgress.style.height = `${progress * 100}%`;
+
+    let active = 0;
+    processSteps.forEach((step, i) => {
+      const r = step.getBoundingClientRect();
+      const mid = r.top + r.height * 0.35;
+      const on = mid < vh * 0.72 && r.bottom > vh * 0.18;
+      step.classList.toggle("is-active", on);
+      if (on) active = i;
+    });
+    // Keep nearest step lit if none match yet
+    if (!processSteps.some((s) => s.classList.contains("is-active"))) {
+      const nearest = processSteps.reduce((best, step, i) => {
+        const d = Math.abs(step.getBoundingClientRect().top - vh * 0.4);
+        return d < best.d ? { i, d } : best;
+      }, { i: 0, d: Infinity });
+      processSteps[nearest.i]?.classList.add("is-active");
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Inward-circle (concave) auto-scrolling carousel
+  const stage = document.getElementById("cylinderStage");
+  const track = document.getElementById("cylinderTrack");
+  if (stage && track) {
+    // Duplicate for seamless loop
+    track.innerHTML += track.innerHTML;
+    const items = Array.from(track.querySelectorAll(".cylinder-item"));
+
+    let offsetX = 0;
+    let paused = false;
+    let dragging = false;
+    let lastX = 0;
+    let loopWidth = 0;
+
+    const measure = () => {
+      loopWidth = track.scrollWidth / 2;
+    };
+    measure();
+    window.addEventListener("resize", measure);
+
+    const applyCylinder = () => {
+      const center = window.innerWidth * 0.5;
+      const half = Math.max(window.innerWidth * 0.5, 300);
+
+      items.forEach((item) => {
+        const face = item.querySelector(".cylinder-face");
+        if (!face) return;
+        // Measure layout box (not the 3D face) so transforms stay stable
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width * 0.5;
+        const x = Math.max(-1.35, Math.min(1.35, (itemCenter - center) / half));
+        // Inward circle: left faces rotate in, right faces rotate in
+        const rotateY = -x * 52;
+        const translateZ = -Math.cos(Math.min(Math.abs(x), 1) * Math.PI * 0.5) * 170;
+        const scale = 1 - Math.min(Math.abs(x), 1) * 0.08;
+        face.style.transform =
+          `rotateY(${rotateY}deg) translateZ(${translateZ}px) scale(${scale})`;
+      });
+    };
+
+    const setTrackX = () => {
+      track.style.left = `${offsetX}px`;
+    };
+
+    const tick = () => {
+      if (!paused && !dragging && !reduceMotion) {
+        offsetX -= 0.6;
+        if (loopWidth > 0 && Math.abs(offsetX) >= loopWidth) {
+          offsetX += loopWidth;
+        }
+        setTrackX();
+      }
+      applyCylinder();
+      requestAnimationFrame(tick);
+    };
+
+    // Remeasure after images load so loop width is accurate
+    Promise.all(
+      Array.from(track.querySelectorAll("img")).map(
+        (img) =>
+          img.complete
+            ? Promise.resolve()
+            : new Promise((res) => {
+                img.addEventListener("load", res, { once: true });
+                img.addEventListener("error", res, { once: true });
+              })
+      )
+    ).then(() => {
+      measure();
+      setTrackX();
+      requestAnimationFrame(tick);
+    });
+
+    stage.addEventListener("mouseenter", () => { paused = true; });
+    stage.addEventListener("mouseleave", () => {
+      paused = false;
+      dragging = false;
+    });
+
+    stage.addEventListener("pointerdown", (e) => {
+      dragging = true;
+      paused = true;
+      lastX = e.clientX;
+      stage.setPointerCapture(e.pointerId);
+    });
+    stage.addEventListener("pointermove", (e) => {
+      if (!dragging) return;
+      const dx = e.clientX - lastX;
+      lastX = e.clientX;
+      offsetX += dx;
+      if (loopWidth > 0) {
+        if (offsetX > 0) offsetX -= loopWidth;
+        if (offsetX < -loopWidth) offsetX += loopWidth;
+      }
+      setTrackX();
+      applyCylinder();
+    });
+    stage.addEventListener("pointerup", () => {
+      dragging = false;
+      paused = false;
+    });
+    stage.addEventListener("pointercancel", () => {
+      dragging = false;
+      paused = false;
+    });
+  }
+
+  // Story tabs + yellow marquee
+  const stories = [
+    {
+      title: "The Beginning",
+      marquee: "The Beginning",
+      body: "Every beautiful celebration has a beginning. Ours started with a belief that weddings should feel honest — shaped by presence, memory, and the people you love, not by someone else’s trends.",
+      year: "2018",
+      image: "https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp",
+      thumb: "https://nehaevent.com/wp-content/uploads/2026/06/portrait.webp",
+      alt: "Neha, Founder & Creative Director",
+    },
+    {
+      title: "The Craft",
+      marquee: "The Craft",
+      body: "We craft weddings that feel lived-in, not staged. Mood, light, florals, and ritual — each detail a sentence in the story of your day, chosen with restraint and heart.",
+      year: "2021",
+      image: "https://nehaevent.com/wp-content/uploads/2026/06/behind-scenes.webp",
+      thumb: "https://nehaevent.com/wp-content/uploads/2026/06/behind-scenes.webp",
+      alt: "Styling and design craft",
+    },
+    {
+      title: "The Celebration",
+      marquee: "The Celebration",
+      body: "Based in Jaipur, we’re a founder-led team who believes beauty begins with honesty. Whether palace courtyard or destination villa — we honor what matters most.",
+      year: "2024",
+      image: "https://nehaevent.com/wp-content/uploads/2026/06/Love-Ishq.webp",
+      thumb: "https://nehaevent.com/wp-content/uploads/2026/06/Love-Ishq.webp",
+      alt: "Celebration atmosphere",
+    },
+  ];
+
+  const tabs = document.querySelectorAll(".story-tab");
+  const storyBody = document.getElementById("storyBody");
+  const storyTitle = document.getElementById("storyTitle");
+  const storyYear = document.getElementById("storyYear");
+  const storyImage = document.getElementById("storyImage");
+  const storyThumb = document.getElementById("storyThumb");
+  const storyMarquee = document.getElementById("storyMarquee");
+
+  const heartSvg =
+    '<span class="heart"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>';
+
+  const buildMarquee = (label) => {
+    if (!storyMarquee) return;
+    const unit = `<span>${label} ${heartSvg}</span>`;
+    storyMarquee.innerHTML = unit.repeat(10) + unit.repeat(10);
+  };
+
+  const setStory = (i) => {
+    const s = stories[i];
+    if (!s) return;
+    tabs.forEach((t, idx) => {
+      const on = idx === i;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", String(on));
+    });
+    if (storyBody) storyBody.textContent = s.body;
+    if (storyTitle) storyTitle.textContent = s.title;
+    if (storyYear) storyYear.textContent = s.year;
+    buildMarquee(s.marquee);
+
+    const swap = (imgEl, src, alt) => {
+      if (!imgEl) return;
+      imgEl.style.opacity = "0";
+      imgEl.style.transform = "scale(1.03)";
+      setTimeout(() => {
+        imgEl.src = src;
+        if (alt) imgEl.alt = alt;
+        imgEl.style.opacity = "1";
+        imgEl.style.transform = "scale(1)";
+      }, 180);
+    };
+    swap(storyImage, s.image, s.alt);
+    swap(storyThumb, s.thumb, "");
+  };
+
+  buildMarquee(stories[0].marquee);
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => setStory(Number(tab.dataset.story)));
+  });
+
+  // Countdown to Dec 1, 2026 (winter season)
+  const target = new Date("2026-12-01T00:00:00");
+  const daysEl = document.getElementById("daysLeft");
+  const tick = () => {
+    const now = new Date();
+    const diff = Math.max(0, target - now);
+    daysEl.textContent = String(Math.ceil(diff / 86400000));
+  };
+  tick();
+  setInterval(tick, 60000);
+
+  // FAQ
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const btn = item.querySelector(".faq-q");
+    btn.addEventListener("click", () => {
+      const open = item.classList.contains("open");
+      document.querySelectorAll(".faq-item").forEach((other) => {
+        other.classList.remove("open");
+        other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+      });
+      if (!open) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  // Form
+  const form = document.getElementById("inquireForm");
+  const status = document.getElementById("formStatus");
+  const serviceSelect = form.querySelector('select[name="service"]');
+  if (serviceSelect) {
+    const syncService = () => {
+      serviceSelect.classList.toggle("is-selected", Boolean(serviceSelect.value));
+    };
+    serviceSelect.addEventListener("change", syncService);
+    syncService();
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const phone = String(data.get("phone") || "").trim();
+    const date = String(data.get("date") || "").trim();
+    const service = String(data.get("service") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    const subject = encodeURIComponent("Wedding Inquiry — Neha's Evento");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nService: ${service}\n\n${message}`
+    );
+    status.textContent = "Opening your email… thank you.";
+    window.location.href = `mailto:contact@nehaevent.com?subject=${subject}&body=${body}`;
+    form.reset();
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("in"));
+  }
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
