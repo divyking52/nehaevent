@@ -4,5 +4,8 @@
   "installCommand": "",
   "buildCommand": "",
   "outputDirectory": "standalone",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/neha-events-wandr.html" }
+  ]
 }
